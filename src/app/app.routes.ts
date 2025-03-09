@@ -7,7 +7,7 @@ import { ServicesComponent } from './pages/services/services.component';
 
 export const appRoutes: Routes = [
   { path: '', component: HomepageComponent },
-  { path: 'om-oss', component: AboutComponent },
-  { path: 'kontakt', component: ContactComponent },
-  { path: 'tjenester', component: ServicesComponent }
+  { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'services', component: ServicesComponent }
 ];

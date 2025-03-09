@@ -1,43 +1,54 @@
-// Hovedcontaineren for headeren
 .header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    background-color: #fff; // Ren, hvit bakgrunn for et moderne uttrykk
-    border-bottom: 1px solid #eaeaea;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
   }
-  
-  // Logoområdet
-  .logo-container {
-    img.logo {
-      max-height: 60px;
-      // Valgfritt: legg til margin eller filtre for et mer unikt uttrykk
-    }
+}
+
+.logo {
+  height: 50px;
+  margin-right: 1rem;
+}
+
+.custom-menubar {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  width: 100%;
+}
+
+.custom-menubar .p-menubar-root-list {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.custom-menubar .p-menubar-item-link {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  margin: 0 0.5rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  transition: color 0.3s;
+  text-decoration: none; /* Fjern underlinje */
+  color: inherit; /* Arv farge */
+}
+
+.custom-menubar .p-menubar-item-link:hover {
+  color: #b88a3d; // Gullaksent ved hover for et luksuriøst preg
+}
+
+@media (max-width: 768px) {
+  .custom-menubar .p-menubar-root-list {
+      flex-direction: column;
+      align-items: center;
   }
-  
-  // Menyområdet
-  .menu-container {
-    // Tilpass PrimeNG Menubar-stiler med ::ng-deep slik at de overstyrer standardstilene
-    ::ng-deep .p-menubar {
-      background: transparent;
-      border: none;
-      box-shadow: none;
-      font-family: 'Montserrat', sans-serif; // Eller en annen elegant font
-    }
-  
-    ::ng-deep .p-menubar a {
-      color: #333;
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin: 0 1rem;
-      transition: color 0.3s ease;
-      text-transform: uppercase;
-    }
-  
-    ::ng-deep .p-menubar a:hover {
-      color: #b88a3d; // Gullaksent ved hover for et luksuriøst preg
-    }
-  }
-  
+}
