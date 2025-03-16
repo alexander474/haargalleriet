@@ -1,1 +1,13 @@
-<p>services works!</p>
+<h1>TJENESTER</h1>
+
+<div class="services-grid">
+  <!-- Bruk <app-service-box> for hver tjeneste -->
+  <app-service-box
+    *ngFor="let s of services"
+    [service]="s">
+  </app-service-box>
+</div>
+
+<p class="footnote">
+  Vi utfører flere typer kurer som for eksempel Olaplex og Kérastase kur
+</p>

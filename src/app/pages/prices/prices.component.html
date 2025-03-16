@@ -1,0 +1,17 @@
+<section class="prices">
+    <h1>Prisliste</h1>
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th>Tjeneste</th>
+          <th>Pris</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of prices">
+          <td>{{ item.service }}</td>
+          <td>{{ item.price }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>

@@ -1,0 +1,23 @@
+.employee-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      margin-bottom: 0.75rem;
+      object-fit: cover;
+    }
+  
+    h3 {
+      font-size: 1.2rem;
+      margin: 0;
+      color: #333;
+    }
+  }
+  

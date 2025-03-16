@@ -9,5 +9,6 @@ export const appRoutes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'services', component: ServicesComponent }
+  { path: 'services', component: ServicesComponent },
+  { path: 'prices', component: ServicesComponent }
 ];

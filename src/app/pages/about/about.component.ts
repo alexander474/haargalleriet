@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TeamSectionComponent } from '../../components/team-section/team-section.component';
 
 interface Employee {
   name: string;
@@ -10,7 +11,7 @@ interface Employee {
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TeamSectionComponent],
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
