@@ -1,0 +1,32 @@
+<footer class="my-footer flex space-between">
+  <!-- 1. Venstre del -->
+  <section class="flex">
+    <!-- Her kan du legge “support info”, kontaktinfo etc. -->
+    <div class="footer-info">
+      <h4>Kontakt oss</h4>
+      <p>Telefon: 12 34 56 78</p>
+      <!-- <p>E-post: post@haargalleriet.no</p> -->
+    </div>
+  </section>
+
+  <!-- 2. Midtdel (f.eks. logo, versjon, slogan) -->
+  <section class="flex column justify-center align-center">
+    <span class="logo-text">Leveres av</span>
+    <img
+      (click)="goToHomePage()"
+      class="footer-logo link"
+      [src]="logoUrl"
+      alt="Logo"
+    />
+    <span class="logo-text">En god handel satt i system</span>
+    <div class="current-version" *ngIf="currentVersion">
+      Client running v. {{ currentVersion }}
+    </div>
+  </section>
+
+  <!-- 3. Høyre del (f.eks. promotekst, SoMe-lenker, etc.) -->
+  <section class="promo flex column justify-center align-center">
+    <h4>Følg oss</h4>
+    <p>Facebook / Instagram / LinkedIn</p>
+  </section>
+</footer>

@@ -1,0 +1,65 @@
+.my-footer {
+    padding: 1rem 2rem;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
+    /* Sjekk at du ikke har for mye padding hvis du vil unngå "uendelig" footer */
+  }
+  
+  /* Enkle "utility"-klasser for flex: */
+  .flex {
+    display: flex;
+  
+    &.space-between {
+      justify-content: space-between;
+    }
+  
+    &.column {
+      flex-direction: column;
+    }
+  
+    &.justify-center {
+      justify-content: center;
+    }
+  
+    &.align-center {
+      align-items: center;
+    }
+  }
+  
+  /* Venstre del */
+  .footer-info {
+    margin-right: 2rem;
+  
+    h4 {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+  }
+  
+  /* Midtdel */
+  .footer-logo.link {
+    cursor: pointer;
+    max-height: 60px; /* Juster etter ønske */
+    margin: 0.5rem 0;
+  }
+  
+  .logo-text {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .current-version {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: #999;
+  }
+  
+  /* Høyre del */
+  .promo {
+    margin-left: 2rem;
+  
+    h4 {
+      margin-bottom: 0.5rem;
+    }
+  }
+  

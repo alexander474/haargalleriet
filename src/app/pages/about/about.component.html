@@ -1,1 +1,28 @@
-<p>about works!</p>
+<section class="about-container">
+    <!-- 1. Om oss -->
+    <div class="intro-section">
+      <h1>OM OSS</h1>
+      <p class="intro-text">
+        Haargalleriet er en frisørsalong som holder til i flotte lokaler midt i hyggelige omgivelser. 
+        Vi ønsker å gi kundene våre en opplevelse av velvære og profesjonell behandling, utført av et 
+        dyktig og engasjert team. Hos oss er du alltid velkommen!
+      </p>
+    </div>
+  
+    <!-- Eiere / "owners-section" -->
+    <div class="owners-section">
+      <img src="assets/images/owners_photo.jpg" alt="Hilde og Anita" />
+    </div>
+  
+    <!-- 2. Våre frisører -->
+    <div class="team-section">
+      <h2>Våre frisører</h2>
+      <div class="team-grid">
+        <div class="employee-card" *ngFor="let emp of employees">
+          <img [src]="emp.image" [alt]="emp.name" />
+          <h3>{{ emp.name }}</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  
