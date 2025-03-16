@@ -49,21 +49,34 @@
 
 /* "Bestill Time"-knapp */
 .custom-button {
-  background-color: #b88a3d !important;
-  color: #fff !important;
+  background-color: #b88a3d !important; /* Gullfarge */
+  color: #fff !important; /* Hvit tekst */
+  border: none !important;
   padding: 0.8rem 1.2rem;
-  border-radius: 5px;
+  font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
+  border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  border: none;
-  font-size: 1rem;
+
+  &:hover {
+    background-color: #a27b36 !important; /* Mørkere gull */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
 }
 
-.custom-button:hover {
-  background-color: #a27b36 !important;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+/* Tving PrimeNG-knappens styling */
+:host ::ng-deep .p-button {
+  background-color: #b88a3d !important;
+  border: none !important;
+  color: white !important;
+}
+
+/* Fiks hvis PrimeNG fortsatt bruker blå bakgrunn */
+:root {
+  --p-button-bg: #b88a3d !important;
+  --p-button-hover-bg: #a27b36 !important;
 }
 
 /* Mobil-meny knapp */
