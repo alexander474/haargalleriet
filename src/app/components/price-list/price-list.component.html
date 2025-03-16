@@ -4,12 +4,10 @@
     [value]="filteredPriceItems"
     responsiveLayout="scroll"
     paginator="true"
-    [rows]="5"
+    [rows]="15"
     [rowsPerPageOptions]="[5, 10, 20]"
     currentPageReportTemplate="Viser {first} til {last} av {totalRecords} priser"
     [alwaysShowPaginator]="true"
-    [filterDelay]="0"
-    [globalFilterFields]="['service', 'price']"
   >
     <!-- Caption: søkefelt og Clear-knapp -->
     <ng-template pTemplate="caption">

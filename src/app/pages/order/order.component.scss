@@ -1,0 +1,55 @@
+/* Sørg for at hele order-siden er sentrert */
+.order-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Juster høyden etter behov */
+  padding: 2rem;
+  background-color: #f9f9f9; /* Lys bakgrunn for siden */
+}
+
+/* Stil for p-card */
+.order-card {
+  max-width: 600px;
+  width: 100%;
+  text-align: center; /* Sentrer alt innhold */
+  padding: 1rem;
+}
+
+/* Stil for undertittel */
+.subtitle-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.call-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.phone-number {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #1976d2; /* Primærfarge for oppmerksomhet */
+}
+
+/* Lenker og booking-info */
+a {
+  color: #1976d2;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #155a9d;
+  text-decoration: underline;
+}
+
+.booking-info {
+  margin-top: 1.5rem;
+  font-style: italic;
+  color: #555;
+}
