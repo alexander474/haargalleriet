@@ -1,52 +1,120 @@
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #f8f8f8; /* Midlertidig bakgrunn */
-  padding: 1rem 2rem;
+.header-container {
+  background: #f8f8f8;
+  padding: 0.5rem 2rem;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-  .header-haargalleriet-logo {
-    height: 60px;
-    width: auto;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
-.header-right {
+/* Innhold i header */
+.header-content {
   display: flex;
-  gap: 10px; /* Avstand mellom lenker */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
 
-  /* Stil på knappene/lenkene */
-  .header-link {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 0.05rem;
-    color: #333;
-    padding: 0.8rem 1rem; /* Legg til padding for høyde */
-    line-height: 1.5; /* Juster linjehøyde */
-    transition: color 0.3s;
+/* Logo */
+.logo {
+  height: 60px;
+  width: auto;
+}
 
-    &:hover {
-      color: #b88a3d;
-    }
+/* Desktop-meny */
+.desktop-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Justering av lenker */
+.header-link {
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s;
+  padding: 0.8rem 1rem;
+}
+
+.header-link:hover {
+  color: #b88a3d;
+}
+
+/* "Bestill Time"-knapp */
+.custom-button {
+  background-color: #b88a3d !important;
+  color: #fff !important;
+  padding: 0.8rem 1.2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 1rem;
+}
+
+.custom-button:hover {
+  background-color: #a27b36 !important;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobil-meny knapp */
+.mobile-menu-icon {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+/* Mobil-meny */
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  background: #fff;
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobil lenker */
+.mobile-link {
+  font-size: 1.2rem;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.mobile-link:hover {
+  color: #b88a3d;
+}
+
+/* Mobil-knapp */
+.mobile-button {
+  width: 100%;
+  text-align: center;
+}
+
+/* Mobiltilpasning */
+@media screen and (max-width: 768px) {
+  .desktop-menu {
+    display: none;
   }
 
-  .highlight-button {
-    background-color: #b88a3d; /* Gullfarge */
-    color: #fff; /* Hvit tekst */
-    padding: 0.8rem 1rem; /* Juster padding for å matche de andre knappene */
-    line-height: 1.5; /* Juster linjehøyde */
-    border-radius: 5px; /* Runde hjørner */
-    font-weight: bold;
-    text-transform: uppercase;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Lett skygge */
-    transition: all 0.3s ease;
-
-    &:hover {
-      background-color: #a27b36; /* Mørkere gull ved hover */
-      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Dypere skygge ved hover */
-    }
+  .mobile-menu-icon {
+    display: block;
   }
 }
