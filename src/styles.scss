@@ -1,7 +1,61 @@
-:root {
-    --primary-color: #b88a3d;
-    --primary-hover-color: #caa25f;
-    --text-color: #333333;
-    --surface-color: #ffffff;
-    --border-radius: 12px;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+body {
+  background-color: #ffffff; // Hvit bakgrunn
+  color: #333333; // Tekstfarge
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1rem 0 0.5rem;
+  font-weight: bold;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: #1976d2; // Primær farge for lenker
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #155a9d;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
   }
+}

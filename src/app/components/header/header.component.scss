@@ -1,47 +1,52 @@
-.buttons {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: #f8f8f8; /* Midlertidig bakgrunn */
   padding: 1rem 2rem;
   border-bottom: 1px solid #ddd;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-.header-haargalleriet-logo {
-  height: 60px;
-  width: auto;
+  .header-haargalleriet-logo {
+    height: 60px;
+    width: auto;
+  }
 }
 
 .header-right {
   display: flex;
-  gap: 2rem; /* Avstand mellom lenker */
-}
+  gap: 10px; /* Avstand mellom lenker */
 
-/* Stil på knappene/lenkene */
-.header-link {
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 0.05rem;
-  color: #333;
-  transition: color 0.3s;
+  /* Stil på knappene/lenkene */
+  .header-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    color: #333;
+    padding: 0.8rem 1rem; /* Legg til padding for høyde */
+    line-height: 1.5; /* Juster linjehøyde */
+    transition: color 0.3s;
 
-  &:hover {
-    color: #b88a3d;
-  }
-}
-
-/* Eksempel på enkel responsiv tilpasning */
-@media (max-width: 768px) {
-  .buttons {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
+    &:hover {
+      color: #b88a3d;
+    }
   }
 
-  .header-right {
-    margin-top: 1rem;
-    gap: 1rem;
+  .highlight-button {
+    background-color: #b88a3d; /* Gullfarge */
+    color: #fff; /* Hvit tekst */
+    padding: 0.8rem 1rem; /* Juster padding for å matche de andre knappene */
+    line-height: 1.5; /* Juster linjehøyde */
+    border-radius: 5px; /* Runde hjørner */
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Lett skygge */
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #a27b36; /* Mørkere gull ved hover */
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Dypere skygge ved hover */
+    }
   }
 }
