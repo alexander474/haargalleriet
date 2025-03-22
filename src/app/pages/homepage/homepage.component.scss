@@ -1,14 +1,49 @@
-.homepage-container {
-    text-align: center;
-  }
-  
-  .frontpage-image {
-    width: 100%;
+.hero-container {
+  position: relative;
+  width: 100vw; // full viewport width
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
+
+  .hero-image {
+    width: 100vw;
     height: auto;
+    display: block;
   }
-  
-  .welcome-text {
-    margin-top: 20px;
-    font-size: 2em;
-    color: #333;
+
+  .hero-text {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    margin: 0;
+    animation: fadeIn 1.2s ease-in-out;
   }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -60%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.hero-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.3)
+  );
+}
