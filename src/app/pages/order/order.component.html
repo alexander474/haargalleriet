@@ -1,30 +1,28 @@
 <div class="order-container">
   <p-card styleClass="order-card">
-    <!-- Tittel-seksjon i p-card -->
-    <ng-template pTemplate="title">BESTILL TIME</ng-template>
+    <ng-template pTemplate="title"> Bestill din neste behandling </ng-template>
 
-    <!-- Undertittel med fremhevet telefonnummer -->
     <ng-template pTemplate="subtitle">
       <div class="subtitle-content">
         <span class="call-text">Ring oss:</span>
-        <span class="phone-number">{{ phoneNumber }}</span>
+        <a class="phone-number" [href]="'tel:' + company.phoneInternational">
+          {{ company.phoneInternational }}
+        </a>
       </div>
     </ng-template>
 
-    <!-- Innhold -->
     <ng-template pTemplate="content">
       <p>
-        Utenfor våre åpningstider kan du kontakte oss på e-post
-        <a [href]="'mailto:' + email">{{ email }}</a> eller på vår
-        <a [href]="facebookUrl" target="_blank">Facebook-side</a>.
+        Utenfor våre åpningstider kan du kontakte oss på
+        <a [href]="'mailto:' + company.email">e-post</a> eller via
+        <a [href]="company.facebook" target="_blank">Facebook</a>.
       </p>
       <p class="booking-info">
-        Timer som ikke blir benyttet eller blir avbestilt 24 timer før vil bli
-        fakturert.
+        Timer som ikke blir benyttet eller blir avbestilt mindre enn 24 timer i
+        forveien, vil bli fakturert.
       </p>
     </ng-template>
 
-    <!-- Footer med handlinger -->
     <ng-template pTemplate="footer">
       <p-button
         label="Kontakt oss"
@@ -35,8 +33,8 @@
       <p-button
         label="Facebook"
         icon="pi pi-facebook"
-        styleClass="p-button-sm p-button-text ml-2"
-        [disabled]="!facebookUrl"
+        styleClass="p-button-sm p-button-text ml-2 footer-facebook"
+        [disabled]="!company.facebook"
         (click)="onFacebookClick()"
       ></p-button>
     </ng-template>

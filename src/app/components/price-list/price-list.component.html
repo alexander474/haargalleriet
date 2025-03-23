@@ -1,78 +1,33 @@
-<div class="card">
-  <p-table
-    #dt
-    [value]="filteredPriceItems"
-    responsiveLayout="scroll"
-    paginator="true"
-    [rows]="15"
-    [rowsPerPageOptions]="[5, 10, 20]"
-    currentPageReportTemplate="Viser {first} til {last} av {totalRecords} priser"
-    [alwaysShowPaginator]="true"
-  >
-    <!-- Caption: søkefelt og Clear-knapp -->
-    <ng-template pTemplate="caption">
-      <div class="caption-container">
-        <p-button
-          [outlined]="true"
-          icon="pi pi-filter-slash"
-          label="Clear"
-          (click)="clear(dt)"
-        ></p-button>
-        <div class="search-container">
-          <i class="pi pi-search"></i>
-          <input
-            type="text"
-            pInputText
-            placeholder="Søk priser..."
-            #globalInput
-            [(ngModel)]="searchValue"
-            (input)="onFilterChange()"
-          />
-        </div>
-      </div>
-    </ng-template>
+<div class="price-list">
+  <!-- Kategoripiller -->
+  <div class="category-pills">
+    <button
+      *ngFor="let category of categories"
+      class="pill"
+      [class.selected]="category === selectedCategory"
+      (click)="selectCategory(category)"
+    >
+      {{ category }}
+    </button>
+  </div>
 
-    <!-- Tabellhode -->
-    <ng-template pTemplate="header">
-      <tr>
-        <th pSortableColumn="service" style="min-width: 12rem">
-          <div class="header-cell">
-            Tjeneste
-            <p-sortIcon field="service"></p-sortIcon>
-            <p-columnFilter
-              type="text"
-              field="service"
-              display="menu"
-            ></p-columnFilter>
-          </div>
-        </th>
-        <th pSortableColumn="price" style="min-width: 8rem">
-          <div class="header-cell">
-            Pris
-            <p-sortIcon field="price"></p-sortIcon>
-            <p-columnFilter
-              type="text"
-              field="price"
-              display="menu"
-            ></p-columnFilter>
-          </div>
-        </th>
-      </tr>
-    </ng-template>
+  <p class="intro-text">
+    Alle våre behandlinger er utført med omtanke, ekspertise og øye for
+    detaljer. Prisene kan variere etter behandlingens omfang.
+  </p>
 
-    <!-- Tabellbody -->
-    <ng-template pTemplate="body" let-item>
-      <tr>
-        <td>{{ item.service }}</td>
-        <td>{{ item.price }}</td>
-      </tr>
-    </ng-template>
+  <!-- Prislinjer -->
+  <div class="price-item" *ngFor="let item of pagedItems">
+    <div class="service">{{ item.service }}</div>
+    <div class="price">{{ item.price }}</div>
+  </div>
 
-    <!-- Tom melding -->
-    <ng-template pTemplate="emptymessage">
-      <tr>
-        <td colspan="2">Ingen priser funnet.</td>
-      </tr>
-    </ng-template>
-  </p-table>
+  <!-- Paginering -->
+  <div class="pagination" *ngIf="totalPages() > 1">
+    <button (click)="page = page - 1" [disabled]="page === 1">←</button>
+    <span>Side {{ page }} av {{ totalPages() }}</span>
+    <button (click)="page = page + 1" [disabled]="page === totalPages()">
+      →
+    </button>
+  </div>
 </div>

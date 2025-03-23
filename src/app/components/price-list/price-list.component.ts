@@ -1,63 +1,54 @@
-import {
-  Component,
-  Input,
-  OnChanges,
-  SimpleChanges,
-  ViewChild,
-  ElementRef,
-} from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TableModule } from 'primeng/table';
-import { InputTextModule } from 'primeng/inputtext';
-import { FormsModule } from '@angular/forms';
 import { PriceItem } from '../../models/PriceItem.model';
-import { Button } from 'primeng/button';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-price-list',
   standalone: true,
-  imports: [CommonModule, FormsModule, TableModule, InputTextModule, Button],
+  imports: [CommonModule, ButtonModule],
   templateUrl: './price-list.component.html',
   styleUrls: ['./price-list.component.scss'],
 })
 export class PriceListComponent implements OnChanges {
   @Input() priceItems: PriceItem[] = [];
 
-  // Referanse til input-elementet for søkefeltet
-  @ViewChild('globalInput') globalInput!: ElementRef<HTMLInputElement>;
+  categories: string[] = [];
+  selectedCategory: string = '';
+  filteredItems: PriceItem[] = [];
 
-  searchValue: string = '';
-  filteredPriceItems: PriceItem[] = [];
+  // Paginering
+  page: number = 1;
+  itemsPerPage: number = 10;
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['priceItems']) {
-      this.filteredPriceItems = [...this.priceItems];
-      this.applyFilter();
+      this.categories = Array.from(
+        new Set(this.priceItems.map((item) => item.category || 'Annet'))
+      );
+      this.selectedCategory = this.categories[0];
+      this.updateFilteredItems();
     }
   }
 
-  onFilterChange(): void {
-    const value = this.globalInput.nativeElement.value;
-    this.searchValue = value;
-    this.applyFilter();
+  selectCategory(category: string): void {
+    this.selectedCategory = category;
+    this.page = 1;
+    this.updateFilteredItems();
   }
 
-  private applyFilter(): void {
-    if (!this.searchValue) {
-      this.filteredPriceItems = [...this.priceItems];
-      return;
-    }
-    const filterVal = this.searchValue.toLowerCase();
-    this.filteredPriceItems = this.priceItems.filter(
-      (item) =>
-        item.service.toLowerCase().includes(filterVal) ||
-        item.price.toLowerCase().includes(filterVal)
+  updateFilteredItems(): void {
+    this.filteredItems = this.priceItems.filter(
+      (item) => (item.category || 'Annet') === this.selectedCategory
     );
   }
 
-  clear(dt: any): void {
-    dt.clear();
-    this.searchValue = '';
-    this.applyFilter();
+  get pagedItems(): PriceItem[] {
+    const start = (this.page - 1) * this.itemsPerPage;
+    return this.filteredItems.slice(start, start + this.itemsPerPage);
+  }
+
+  totalPages(): number {
+    return Math.ceil(this.filteredItems.length / this.itemsPerPage);
   }
 }

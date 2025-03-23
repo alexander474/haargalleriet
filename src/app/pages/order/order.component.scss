@@ -1,55 +1,113 @@
-/* Sørg for at hele order-siden er sentrert */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap");
+
+$order-text: #3b2c24;
+$order-accent: #b08968;
+$order-bg: #fdfaf6;
+$order-line: #e2d4c3;
+
 .order-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh; /* Juster høyden etter behov */
-  padding: 2rem;
-  background-color: #f9f9f9; /* Lys bakgrunn for siden */
+  min-height: 80vh;
+  padding: 3rem 1rem;
+  background-color: $order-bg;
+  font-family: "Playfair Display", serif;
+  color: $order-text;
 }
 
-/* Stil for p-card */
 .order-card {
   max-width: 600px;
   width: 100%;
-  text-align: center; /* Sentrer alt innhold */
-  padding: 1rem;
+  padding: 3rem 2rem;
+  border-radius: 18px;
+  background-color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  border: 1px solid $order-line;
 }
 
-/* Stil for undertittel */
 .subtitle-content {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
   align-items: center;
+  gap: 0.3rem;
+  margin: 1rem 0;
 }
 
 .call-text {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+  color: $order-text;
+  opacity: 0.8;
+  letter-spacing: 0.03em;
 }
 
 .phone-number {
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: #1976d2; /* Primærfarge for oppmerksomhet */
-}
-
-/* Lenker og booking-info */
-a {
-  color: #1976d2;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: $order-accent;
   text-decoration: none;
-  transition: color 0.3s;
+
+  &:hover {
+    text-decoration: underline;
+    color: darken($order-accent, 10%);
+  }
 }
 
-a:hover {
-  color: #155a9d;
-  text-decoration: underline;
+a {
+  color: $order-accent;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+
+  &:hover {
+    color: darken($order-accent, 10%);
+    text-decoration: underline;
+  }
 }
 
 .booking-info {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   font-style: italic;
-  color: #555;
+  color: #7b6c63;
+  font-size: 0.95rem;
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+/* Buttons */
+:host ::ng-deep .p-button {
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 500;
+  border-radius: 999px;
+  padding: 0.6rem 1.4rem;
+}
+
+:host ::ng-deep .p-button-outlined {
+  border: 1px solid $order-accent;
+  color: $order-accent;
+  background-color: transparent;
+}
+
+:host ::ng-deep .p-button-outlined:hover {
+  background-color: #f5eee9;
+  border-color: $order-accent;
+}
+
+:host ::ng-deep .p-button-text {
+  color: $order-accent;
+}
+
+:host ::ng-deep .p-button-text:hover {
+  background-color: #f4f0eb;
+}
+
+/* Facebook-knapp som i footer */
+:host ::ng-deep .footer-facebook {
+  color: #1877f2 !important;
+
+  &:hover {
+    background-color: #e7f0fe !important;
+  }
 }

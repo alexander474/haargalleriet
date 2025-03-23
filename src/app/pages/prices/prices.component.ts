@@ -18,11 +18,22 @@ export class PricesComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    //this.loadExcelData();
-    this.priceItems = Array.from({ length: 500 }, (_, i) => ({
-      service: `Tjeneste ${i + 1}`,
-      price: `${100 + i} - ${200 + i} kr`,
-    }));
+    const categories = [
+      'Klipp & styling',
+      'Fargebehandlinger',
+      'Kur & pleie',
+      'Vipper & bryn',
+      'Tilleggstjenester',
+    ];
+
+    this.priceItems = Array.from({ length: 500 }, (_, i) => {
+      const category = categories[Math.floor(i / 100)]; // 100 i hver kategori
+      return {
+        service: `Tjeneste ${i + 1}`,
+        price: `${100 + i} - ${200 + i} kr`,
+        category,
+      };
+    });
   }
 
   loadExcelData(): void {
@@ -40,6 +51,7 @@ export class PricesComponent implements OnInit {
             this.priceItems = jsonData.slice(1).map((row: any[]) => ({
               service: row[0] ? row[0].toString() : '',
               price: row[1] ? row[1].toString() : '',
+              category: row[2] ? row[2].toString() : '',
             }));
           }
         },
