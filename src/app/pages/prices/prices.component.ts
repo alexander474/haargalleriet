@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import * as XLSX from 'xlsx';
-import { PriceItem } from '../../models/price-item.model';
+import { PriceItem } from '../../models/PriceItem.model';
 import { PriceListComponent } from '../../components/price-list/price-list.component';
 import { ButtonModule } from 'primeng/button';
 

@@ -1,23 +1,38 @@
 .employee-card {
-    background-color: #fff;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    padding: 1rem;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  
-    img {
-      width: 100%;
-      height: auto;
-      border-radius: 4px;
-      margin-bottom: 0.75rem;
-      object-fit: cover;
-    }
-  
+  width: 100%;
+  max-width: 280px;
+  background: white;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  border-radius: 24px;
+  overflow: hidden;
+  text-align: center;
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+
+  .employee-info {
+    padding: 1rem 0.75rem;
+
     h3 {
       font-size: 1.2rem;
-      margin: 0;
-      color: #333;
+      font-weight: 600;
+      margin: 0.5rem 0 0;
+      color: #111;
+      font-family: "Playfair Display", serif;
+      letter-spacing: 0.5px;
     }
   }
-  
+}

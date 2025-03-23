@@ -1,7 +1,8 @@
 <div class="team-section">
-    <h2>Våre frisører</h2>
-    <div class="team-grid">
-      <app-employee-card *ngFor="let emp of employees" [employee]="emp"></app-employee-card>
-    </div>
+  <div class="team-grid">
+    <app-employee-card
+      *ngFor="let employee of employees"
+      [employee]="employee"
+    />
   </div>
-  
+</div>

@@ -13,13 +13,9 @@
   <div class="intro-section">
     <h1>OM OSS</h1>
     <p class="intro-text">
-      Hårgalleriet Fagernes er en frisørsalong som holder til i flotte lokaler
-      midt i hyggelige omgivelser. Vi ønsker å gi kundene våre en opplevelse av
-      velvære og profesjonell behandling, utført av et dyktig og engasjert team.
-      Hos oss er du alltid velkommen!
+      {{ companyInfo.about }}
     </p>
   </div>
 
-  <!-- Team-seksjonen (bruker din abstraherte employee card) -->
   <app-team-section [employees]="employees"></app-team-section>
 </section>

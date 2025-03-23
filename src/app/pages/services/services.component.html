@@ -1,7 +1,11 @@
 <h1>TJENESTER</h1>
 
 <div class="services-grid">
-  <app-service-box *ngFor="let s of services" [service]="s.label">
+  <app-service-box
+    *ngFor="let s of services"
+    [name]="s.label"
+    [description]="s.description"
+  >
   </app-service-box>
 </div>
 

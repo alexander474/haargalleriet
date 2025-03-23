@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 import { TableModule } from 'primeng/table';
 import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
-import { PriceItem } from '../../models/price-item.model';
+import { PriceItem } from '../../models/PriceItem.model';
 import { Button } from 'primeng/button';
 
 @Component({
