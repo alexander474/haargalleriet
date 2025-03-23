@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Employee } from '../../models/Employee.model';
 import { CommonModule } from '@angular/common';
+import { Employee } from '../../models/Employee.model';
 
 @Component({
   selector: 'app-employee-card',
