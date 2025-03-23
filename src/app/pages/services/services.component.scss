@@ -22,10 +22,10 @@ h1 {
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2rem;
+  gap: $spacing-lg;
+  margin: 0 auto $spacing-lg auto;
   justify-content: center;
   max-width: $breakpoint-xl;
-  margin: 0 auto 2rem auto;
 }
 
 // 📌 Fotnote / tilleggsinfo
@@ -35,4 +35,14 @@ h1 {
   color: $color-muted;
   font-style: italic;
   text-align: center;
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
 }
