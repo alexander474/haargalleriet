@@ -1,19 +1,20 @@
+@import "variables";
+
 .team-section {
-  margin: 2rem 0;
+  margin: $spacing-lg 0;
 
   .team-grid {
     display: grid;
-    gap: 2rem;
-    padding: 2rem 1rem;
+    gap: $spacing-lg;
+    padding: $spacing-lg $spacing-sm;
 
-    // Mobil
     grid-template-columns: 1fr;
 
-    @media (min-width: 600px) {
+    @media (min-width: $breakpoint-sm) {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @media (min-width: 900px) {
+    @media (min-width: $breakpoint-lg) {
       grid-template-columns: repeat(3, 1fr);
     }
   }
