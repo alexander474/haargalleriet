@@ -6,7 +6,7 @@ import { ServiceType } from '../../models/ServiceType.model';
 
 @Component({
   selector: 'app-homepage',
-  imports: [Divider, Card, Listbox],
+  imports: [],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss',
 })
