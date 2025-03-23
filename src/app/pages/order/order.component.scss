@@ -1,8 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap");
-
-$order-text: #3b2c24;
-$order-accent: #b08968;
-$order-line: #e2d4c3;
+@import "variables";
 
 .order-container {
   display: flex;
@@ -10,19 +6,19 @@ $order-line: #e2d4c3;
   align-items: center;
   min-height: 80vh;
   padding: 3rem 1rem;
-  font-family: "Playfair Display", serif;
-  color: $order-text;
+  font-family: $font-primary;
+  color: $color-text-main;
 }
 
 .order-card {
   max-width: 600px;
   width: 100%;
   padding: 3rem 2rem;
-  border-radius: 18px;
-  background-color: white;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border-radius: $radius-soft;
+  background-color: $color-bg-white;
+  box-shadow: $shadow-medium;
   text-align: center;
-  border: 1px solid $order-line;
+  border: 1px solid $color-border-light;
 }
 
 .subtitle-content {
@@ -36,7 +32,7 @@ $order-line: #e2d4c3;
 .call-text {
   font-size: 1rem;
   font-weight: 500;
-  color: $order-text;
+  color: $color-text-main;
   opacity: 0.8;
   letter-spacing: 0.03em;
 }
@@ -44,23 +40,23 @@ $order-line: #e2d4c3;
 .phone-number {
   font-size: 2.2rem;
   font-weight: 600;
-  color: $order-accent;
+  color: $color-accent;
   text-decoration: none;
 
   &:hover {
     text-decoration: underline;
-    color: darken($order-accent, 10%);
+    color: $color-accent-dark;
   }
 }
 
 a {
-  color: $order-accent;
+  color: $color-accent;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s;
 
   &:hover {
-    color: darken($order-accent, 10%);
+    color: $color-accent-dark;
     text-decoration: underline;
   }
 }
@@ -68,7 +64,7 @@ a {
 .booking-info {
   margin-top: 2rem;
   font-style: italic;
-  color: #7b6c63;
+  color: $color-muted;
   font-size: 0.95rem;
   max-width: 500px;
   margin-inline: auto;
@@ -76,25 +72,25 @@ a {
 
 /* Buttons */
 :host ::ng-deep .p-button {
-  font-family: "Segoe UI", sans-serif;
+  font-family: $font-secondary;
   font-weight: 500;
-  border-radius: 999px;
+  border-radius: $radius-rounded;
   padding: 0.6rem 1.4rem;
 }
 
 :host ::ng-deep .p-button-outlined {
-  border: 1px solid $order-accent;
-  color: $order-accent;
+  border: 1px solid $color-accent;
+  color: $color-accent;
   background-color: transparent;
 }
 
 :host ::ng-deep .p-button-outlined:hover {
-  background-color: #f5eee9;
-  border-color: $order-accent;
+  background-color: lighten($color-accent, 38%);
+  border-color: $color-accent;
 }
 
 :host ::ng-deep .p-button-text {
-  color: $order-accent;
+  color: $color-accent;
 }
 
 :host ::ng-deep .p-button-text:hover {
@@ -103,9 +99,9 @@ a {
 
 /* Facebook-knapp som i footer */
 :host ::ng-deep .footer-facebook {
-  color: #1877f2 !important;
+  color: $color-facebook !important;
 
   &:hover {
-    background-color: #e7f0fe !important;
+    background-color: lighten($color-facebook, 40%) !important;
   }
 }
