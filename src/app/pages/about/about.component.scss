@@ -1,9 +1,11 @@
+@import "variables";
+
 h1 {
-  font-family: "Playfair Display", serif;
+  font-family: $font-primary;
   font-size: 2.5rem;
   font-weight: 600;
-  margin-bottom: 1.5rem;
-  color: #2e2e2e;
+  margin-bottom: $spacing-md;
+  color: $color-text-main;
   text-align: center;
   letter-spacing: 0.03em;
   text-transform: none;
@@ -12,8 +14,8 @@ h1 {
 .title-underline {
   width: 60px;
   height: 2px;
-  background-color: #c8a96b;
-  margin: 0 auto 2rem auto;
+  background-color: $color-accent;
+  margin: 0 auto $spacing-lg auto;
 }
 
 .hero {
@@ -28,32 +30,32 @@ h1 {
 }
 
 .about-container {
-  max-width: 1200px;
+  max-width: $breakpoint-xl;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: $spacing-lg $spacing-sm;
   text-align: center;
 
   .intro-section {
-    margin-bottom: 2rem;
+    margin-bottom: $spacing-lg;
 
     h1 {
       font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #333;
+      margin-bottom: $spacing-sm;
+      color: $color-text-main;
+      font-family: $font-primary;
     }
 
     .intro-text {
       font-size: 1.1rem;
       line-height: 1.6;
-      color: #555;
+      color: $color-muted;
       max-width: 800px;
       margin: 0 auto;
     }
   }
 }
 
-/* Responsiv tilpasning for mindre skjermer */
-@media (max-width: 768px) {
+@media (max-width: $breakpoint-md) {
   .hero {
     .hero-image {
       height: 250px;
@@ -61,12 +63,13 @@ h1 {
   }
 
   .about-container {
-    padding: 1.5rem 1rem;
+    padding: $spacing-md $spacing-sm;
 
     .intro-section {
       h1 {
         font-size: 2rem;
       }
+
       .intro-text {
         font-size: 1rem;
       }
