@@ -1,6 +1,8 @@
+@import "variables";
+
 .hero-container {
   position: relative;
-  width: 100vw; // full viewport width
+  width: 100vw;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
@@ -19,10 +21,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 3rem;
-    color: white;
+    color: $color-bg-white;
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
     margin: 0;
+    font-family: $font-primary;
     animation: fadeIn 1.2s ease-in-out;
+    text-align: center;
   }
 
   @keyframes fadeIn {
@@ -35,15 +39,15 @@
       transform: translate(-50%, -50%);
     }
   }
-}
 
-.hero-container::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.1),
-    rgba(0, 0, 0, 0.3)
-  );
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    );
+  }
 }
