@@ -2,7 +2,6 @@
 
 $order-text: #3b2c24;
 $order-accent: #b08968;
-$order-bg: #fdfaf6;
 $order-line: #e2d4c3;
 
 .order-container {
@@ -11,7 +10,6 @@ $order-line: #e2d4c3;
   align-items: center;
   min-height: 80vh;
   padding: 3rem 1rem;
-  background-color: $order-bg;
   font-family: "Playfair Display", serif;
   color: $order-text;
 }

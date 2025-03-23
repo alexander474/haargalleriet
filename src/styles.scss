@@ -1,37 +1,74 @@
-html,
-body {
-  height: 100%; /* Fyller hele høyden */
-  margin: 0;
-  padding: 0;
-  background-color: #ffffff; /* Hvit bakgrunn */
-  color: #333333;
-  font-family: "Arial", sans-serif;
-  line-height: 1.6;
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap");
+@import "variables";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-/* App-root fyller hele viewporten og bruker flex-kolonne */
+html,
+body {
+  background-color: $color-bg-light;
+  color: $color-text-main;
+  font-family: $font-primary;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: $color-accent;
+  text-decoration: none;
+  transition: 0.3s;
+
+  &:hover {
+    color: $color-accent-dark;
+    text-decoration: underline;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 600;
+  color: $color-text-main;
+  letter-spacing: 0.02em;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
 .app-root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* Innholdet tar opp all tilgjengelig plass mellom header og footer */
 .content {
   flex: 1;
 }
 
-/* Footer styling – ligger nederst */
 footer {
-  background-color: #f8f8f8;
-  color: #333;
+  background-color: $color-bg-white;
+  color: $color-muted;
   padding: 1rem;
   text-align: center;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid $color-border-light;
 }
 
-/* Eksempel på responsive tilpasninger for mobil */
-@media screen and (max-width: 768px) {
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media screen and (max-width: $breakpoint-md) {
   .app-root {
     flex-direction: column;
   }
@@ -44,34 +81,4 @@ footer {
     padding: 0.75rem;
     font-size: 14px;
   }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 1rem 0 0.5rem;
-  font-weight: bold;
-}
-
-p {
-  margin: 0 0 1rem;
-}
-
-a {
-  color: #1976d2; // Primær farge for lenker
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-a:hover {
-  color: #155a9d;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
 }
