@@ -1,28 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap");
+@import "variables";
 
 .price-list {
-  padding: 3rem 1rem;
+  padding: $spacing-xl $spacing-sm;
   max-width: 800px;
   margin: auto;
-  font-family: "Playfair Display", serif;
+  font-family: $font-primary;
   font-size: 1.1rem;
   letter-spacing: 0.02em;
-  color: #2e2e2e;
-  background-color: #fdfdfb;
+  color: $color-text-main;
+  background-color: $color-bg-light;
 }
 
 .category-pills {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: $spacing-xl;
   overflow-x: auto;
   white-space: nowrap;
-  padding-bottom: 0.5rem;
+  padding-bottom: $spacing-sm;
 
   .pill {
     border: none;
-    border-radius: 999px;
+    border-radius: $radius-rounded;
     padding: 0.6rem 1.4rem;
     background-color: #f3f3f3;
     cursor: pointer;
@@ -46,8 +46,8 @@
 .intro-text {
   font-style: italic;
   font-size: 1rem;
-  color: #777;
-  margin-bottom: 2rem;
+  color: $color-muted;
+  margin-bottom: $spacing-lg;
   text-align: center;
 }
 
@@ -55,32 +55,32 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  background: $color-bg-white;
+  border-radius: $radius-soft;
+  box-shadow: $shadow-soft;
   padding: 1.2rem 1.4rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: $spacing-md;
   transition: transform 0.2s ease, opacity 0.2s ease;
 
   &:hover {
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    box-shadow: $shadow-medium;
   }
 }
 
 .service {
   font-size: 1.1rem;
   font-weight: 500;
-  color: #2e2e2e;
+  color: $color-text-main;
 }
 
 .price {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #6b4c34; // luksuriøs brun-gull fargetone
+  color: $color-price-highlight;
 }
 
 .pagination {
-  margin-top: 3rem;
+  margin-top: $spacing-xl;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,7 +90,7 @@
     background-color: #eee;
     border: none;
     padding: 0.6rem 1.2rem;
-    border-radius: 8px;
+    border-radius: $radius-soft;
     cursor: pointer;
     font-weight: 500;
     transition: background-color 0.2s ease;
