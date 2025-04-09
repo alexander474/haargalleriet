@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { companyInfo } from '../../models/companyInfo.model';
+import { companyInfo } from '../../models/CompanyInfo.model';
 import { ButtonModule } from 'primeng/button';
 
 @Component({
