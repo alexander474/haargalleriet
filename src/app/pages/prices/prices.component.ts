@@ -18,46 +18,57 @@ export class PricesComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    const categories = [
-      'Klipp & styling',
-      'Fargebehandlinger',
-      'Kur & pleie',
-      'Vipper & bryn',
-      'Tilleggstjenester',
-    ];
-
-    this.priceItems = Array.from({ length: 500 }, (_, i) => {
-      const category = categories[Math.floor(i / 100)]; // 100 i hver kategori
-      return {
-        service: `Tjeneste ${i + 1}`,
-        price: `${100 + i} - ${200 + i} kr`,
-        category,
-      };
-    });
+    this.loadExcelData();
   }
 
   loadExcelData(): void {
     this.http
-      .get('assets/prices/prices.xlsx', { responseType: 'arraybuffer' })
+      .get('assets/prices/prices.xlsx', {
+        responseType: 'arraybuffer',
+      })
       .subscribe(
         (data: ArrayBuffer) => {
           const workbook: XLSX.WorkBook = XLSX.read(data, { type: 'array' });
-          const sheetName: string = workbook.SheetNames[0];
-          const worksheet: XLSX.WorkSheet = workbook.Sheets[sheetName];
-          const jsonData: any[] = XLSX.utils.sheet_to_json(worksheet, {
-            header: 1,
+          const priceItems: PriceItem[] = [];
+
+          workbook.SheetNames.forEach((sheetName: string) => {
+            const worksheet: XLSX.WorkSheet = workbook.Sheets[sheetName];
+            const jsonData: any[] = XLSX.utils.sheet_to_json(worksheet, {
+              header: 1,
+            });
+
+            if (jsonData.length > 1) {
+              const headers = jsonData[0] as string[];
+
+              jsonData.slice(1).forEach((row: any[]) => {
+                if (row && row.length) {
+                  priceItems.push({
+                    service: row[0] ? row[0].toString() : '',
+                    price: this.formatPrice(row, headers),
+                    category: sheetName,
+                  });
+                }
+              });
+            }
           });
-          if (jsonData.length > 1) {
-            this.priceItems = jsonData.slice(1).map((row: any[]) => ({
-              service: row[0] ? row[0].toString() : '',
-              price: row[1] ? row[1].toString() : '',
-              category: row[2] ? row[2].toString() : '',
-            }));
-          }
+
+          this.priceItems = priceItems;
         },
         (error) => {
           console.error('Feil under lasting av Excel-fil', error);
         }
       );
+  }
+
+  private formatPrice(row: any[], headers: string[]): string {
+    if (headers.includes('Kort hår') && headers.includes('Langt hår')) {
+      const shortHairPrice = row[1] ? row[1].toString() : '';
+      const longHairPrice = row[2] ? row[2].toString() : '';
+      if (shortHairPrice && longHairPrice && longHairPrice !== '-') {
+        return `${shortHairPrice} / ${longHairPrice}`;
+      }
+      return shortHairPrice || longHairPrice;
+    }
+    return row[1] ? row[1].toString() : '';
   }
 }
