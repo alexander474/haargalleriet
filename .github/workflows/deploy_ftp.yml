@@ -31,6 +31,6 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: 22
           source: dist/haargalleriet/browser/*
-          target: ./
+          target: public_html/
           rm: true
           strip_components: 0
