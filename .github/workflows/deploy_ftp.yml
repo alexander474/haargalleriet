@@ -23,12 +23,12 @@ jobs:
       - name: Build Angular project
         run: npm run build -- --base-href /
 
-      - name: Upload via FTP to One.com
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: Upload with SCP to One.com
+        uses: appleboy/scp-action@v0.1.4
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: dist/haargalleriet/browser/
-          server-dir: /
-          verbose: true
+          port: 22
+          source: dist/haargalleriet/browser/*
+          target: /
