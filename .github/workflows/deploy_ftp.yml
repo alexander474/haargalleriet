@@ -1,4 +1,4 @@
-name: Build and Deploy Angular to One.com via SCP
+name: Deploy One.com
 
 on:
   push:
@@ -31,6 +31,6 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: 22
           source: dist/haargalleriet/browser/*
-          target: httpd.www/
+          target: ../../httpd.www/
           rm: false
           strip_components: 0
