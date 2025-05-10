@@ -33,3 +33,4 @@ jobs:
           source: dist/haargalleriet/browser/*
           target: public_html/
           rm: true
+          strip_components: 0
