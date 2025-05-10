@@ -25,9 +25,10 @@ jobs:
 
       - name: Upload via FTP to One.com
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: dist/haargalleriet/browser/
-          server-dir: /
+    with:
+      server: ${{ secrets.FTP_SERVER }}
+      username: ${{ secrets.FTP_USERNAME }}
+      password: ${{ secrets.FTP_PASSWORD }}
+      local-dir: dist/haargalleriet/browser/
+      server-dir: /public_html/
+      verbose: true
