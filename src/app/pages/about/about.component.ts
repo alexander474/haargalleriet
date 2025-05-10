@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TeamSectionComponent } from '../../components/team-section/team-section.component';
 import { Employee, EMPLOYEES } from '../../models/Employee.model';
-import { companyInfo } from '../../models/companyInfo.model';
+import { companyInfo } from '../../models/CompanyInfo.model';
 
 @Component({
   selector: 'app-about',
