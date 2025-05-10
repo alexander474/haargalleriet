@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^haargallerietfagernes\.no [NC]
+RewriteRule ^(.*)$ https://www.haargallerietfagernes.no/$1 [L,R=301]
