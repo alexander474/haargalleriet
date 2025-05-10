@@ -1,4 +1,4 @@
-name: Build and Deploy Angular to One.com via FTP
+name: Build and Deploy Angular to One.com via SCP
 
 on:
   push:
@@ -32,5 +32,5 @@ jobs:
           port: 22
           source: dist/haargalleriet/browser/*
           target: public_html/
-          rm: true
+          rm: false
           strip_components: 0
