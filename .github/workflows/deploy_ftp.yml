@@ -30,7 +30,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 22
-          source: dist/haargalleriet/browser/*
+          source: dist/haargalleriet/browser/**
           target: /customers/9/d/9/haargallerietfagernes.no/httpd.www/
-          rm: false
-          strip_components: 0
+          rm: true
+          strip_components: 3
