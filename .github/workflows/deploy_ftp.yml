@@ -31,4 +31,3 @@ jobs:
       password: ${{ secrets.FTP_PASSWORD }}
       local-dir: dist/haargalleriet/browser/
       server-dir: /public_html/
-      verbose: true
