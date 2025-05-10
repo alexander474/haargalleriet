@@ -1,4 +1,4 @@
-name: Build and Deploy Angular to One.com via FTP
+name: Build and Deploy to One.com via FTP
 
 on:
   push:
