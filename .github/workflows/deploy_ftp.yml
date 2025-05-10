@@ -1,4 +1,4 @@
-name: Build and Deploy to One.com via FTP
+name: Build and Deploy Angular to One.com via FTP
 
 on:
   push:
@@ -25,10 +25,10 @@ jobs:
 
       - name: Upload via FTP to One.com
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-    with:
-      server: ${{ secrets.FTP_SERVER }}
-      username: ${{ secrets.FTP_USERNAME }}
-      password: ${{ secrets.FTP_PASSWORD }}
-      local-dir: dist/haargalleriet/browser/
-      server-dir: /public_html/
-      verbose: true
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: dist/haargalleriet/browser/
+          server-dir: /public_html/
+          verbose: true
