@@ -1,3 +1,11 @@
 RewriteEngine On
+RewriteBase /
+
+# Redirect non-www to www
 RewriteCond %{HTTP_HOST} ^haargallerietfagernes\.no [NC]
 RewriteRule ^(.*)$ https://www.haargallerietfagernes.no/$1 [L,R=301]
+
+# Support Angular deep linking
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]
