@@ -1,43 +1,50 @@
-<footer class="my-footer flex space-between">
-  <!-- Venstre: Åpningstider -->
-  <section class="footer-hours flex column">
+<footer class="my-footer">
+  <div class="footer-section footer-hours">
     <h4>Åpningstider</h4>
-    <div class="opening-hours-grid">
-      <div><strong>Mandag:</strong><br />{{ companyInfo.hours.monday }}</div>
-      <div><strong>Tirsdag:</strong><br />{{ companyInfo.hours.tuesday }}</div>
-      <div><strong>Onsdag:</strong><br />{{ companyInfo.hours.wednesday }}</div>
-      <div><strong>Torsdag:</strong><br />{{ companyInfo.hours.thursday }}</div>
-      <div><strong>Fredag:</strong><br />{{ companyInfo.hours.friday }}</div>
-      <div><strong>Lørdag:</strong><br />{{ companyInfo.hours.saturday }}</div>
-      <div class="sunday">
-        <strong>Søndag:</strong><br />{{ companyInfo.hours.sunday }}
-      </div>
-    </div>
-  </section>
+    <ul class="hours-grid">
+      <li>
+        <span>Mandag</span><span>{{ companyInfo.hours.monday }}</span>
+      </li>
+      <li>
+        <span>Tirsdag</span><span>{{ companyInfo.hours.tuesday }}</span>
+      </li>
+      <li>
+        <span>Onsdag</span><span>{{ companyInfo.hours.wednesday }}</span>
+      </li>
+      <li>
+        <span>Torsdag</span><span>{{ companyInfo.hours.thursday }}</span>
+      </li>
+      <li>
+        <span>Fredag</span><span>{{ companyInfo.hours.friday }}</span>
+      </li>
+      <li>
+        <span>Lørdag</span><span>{{ companyInfo.hours.saturday }}</span>
+      </li>
+      <li>
+        <span>Søndag</span><span>{{ companyInfo.hours.sunday }}</span>
+      </li>
+    </ul>
+  </div>
 
-  <!-- Midten: Kontakt -->
-  <section class="footer-info flex column align-center">
-    <h4>Kontakt oss</h4>
+  <div class="footer-section footer-contact">
+    <h4>Kontakt</h4>
     <p>{{ companyInfo.address }}</p>
-    <p>
-      <a href="tel:{{ companyInfo.phoneInternational }}">{{
-        companyInfo.phoneInternational
-      }}</a>
-    </p>
-    <p>
-      <a href="mailto:{{ companyInfo.email }}">{{ companyInfo.email }}</a>
-    </p>
-  </section>
+    <a href="tel:{{ companyInfo.phoneInternational }}">{{
+      companyInfo.phoneInternational
+    }}</a>
+    <a href="mailto:{{ companyInfo.email }}">{{ companyInfo.email }}</a>
+  </div>
 
-  <!-- Høyre: Sosiale medier -->
-  <section class="promo flex column align-center">
+  <div class="footer-section footer-social">
     <h4>Følg oss</h4>
-    <p-button
-      label="Facebook"
-      icon="pi pi-facebook"
-      styleClass="p-button-sm p-button-text"
-      [disabled]="!companyInfo.facebook"
-      (click)="onFacebookClick()"
-    ></p-button>
-  </section>
+    <a
+      class="social-link"
+      *ngIf="companyInfo.facebook"
+      [href]="companyInfo.facebook"
+      target="_blank"
+      rel="noopener"
+    >
+      <i class="pi pi-facebook"></i> Facebook
+    </a>
+  </div>
 </footer>

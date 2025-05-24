@@ -1,106 +1,101 @@
 @import "variables";
 
 .my-footer {
-  padding: $spacing-md $spacing-lg;
-  background-color: $color-bg-white;
-  border-top: 1px solid $color-border-light;
-}
-
-.flex {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 1.5rem 1rem 1rem;
+  background-color: $color-bg-light;
+  color: $color-text-main;
+  border-top: 1px solid $color-border-light;
+  font-size: 1rem;
+  line-height: 1.5;
 
-  &.space-between {
-    justify-content: space-between;
-  }
+  .footer-section {
+    flex: 1 1 240px;
+    min-width: 200px;
 
-  &.column {
-    flex-direction: column;
-  }
+    h4 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: $color-text-main;
+      letter-spacing: 0.5px;
+    }
 
-  &.justify-center {
-    justify-content: center;
-  }
+    p,
+    a {
+      display: block;
+      margin-bottom: 0.4rem;
+      color: $color-text-main;
+      text-decoration: none;
 
-  &.align-center {
-    align-items: center;
+      &:hover {
+        color: $color-accent-dark;
+      }
+    }
+
+    .hours-grid {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+
+        span:first-child {
+          font-weight: 500;
+          color: $color-text-main;
+        }
+
+        span:last-child {
+          color: $color-text-main;
+        }
+      }
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 1rem;
+      color: $color-accent;
+      text-decoration: none;
+      border: 1px solid $color-accent;
+      padding: 0.3rem 0.9rem;
+      border-radius: 999px;
+      transition: all 0.2s ease;
+
+      i {
+        font-size: 1rem;
+      }
+
+      &:hover {
+        background: $color-accent;
+        color: $color-bg-white;
+      }
+    }
   }
 }
 
-.footer-info,
-.footer-hours,
-.promo {
-  flex: 1;
-  margin: 0 $spacing-sm;
-
-  .opening-hours-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(120px, 1fr));
-    gap: 0.5rem 1.5rem;
-    font-size: 0.95rem;
-    color: $color-muted;
-
-    div {
-      line-height: 1.4;
-    }
-
-    .sunday {
-      grid-column: span 2;
-      text-align: center;
-      margin-top: 0.5rem;
-    }
-  }
-
-  h4 {
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-    color: $color-text-main;
-  }
-
-  a {
-    color: inherit;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  ul {
-    padding: 0;
-    list-style: none;
-    font-size: 0.95rem;
-    line-height: 1.4;
-    color: $color-muted;
-
-    li {
-      margin-bottom: 0.5rem;
-    }
-  }
-
-  p {
-    margin: 0.2rem 0;
-    font-size: 0.95rem;
-    color: $color-text-main;
-  }
-
-  .p-button {
-    font-size: 0.95rem;
-    margin-top: 0.3rem;
-  }
-}
-
-@media (max-width: $breakpoint-md) {
+@media (max-width: 768px) {
   .my-footer {
-    padding: $spacing-lg $spacing-sm;
-    gap: $spacing-lg;
-    text-align: center;
     flex-direction: column;
     align-items: center;
-  }
+    text-align: center;
 
-  .footer-info,
-  .footer-hours,
-  .promo {
-    align-items: center;
+    .footer-section {
+      align-items: center;
+
+      .hours-grid li {
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+    }
   }
 }
