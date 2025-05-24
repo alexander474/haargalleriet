@@ -10,6 +10,4 @@ import { ServiceType } from '../../models/ServiceType.model';
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss',
 })
-export class HomepageComponent {
-  services = Object.values(ServiceType).map((service) => ({ label: service }));
-}
+export class HomepageComponent {}

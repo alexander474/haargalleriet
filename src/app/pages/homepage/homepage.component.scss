@@ -70,28 +70,23 @@
   }
 }
 
-.intro,
-.services,
-.testimonial,
-.brands {
-  padding: 2rem 1rem;
+.intro {
+  background-color: $color-bg-light;
+  color: $color-text-main;
+  padding: 2rem 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
 
   h2 {
-    font-family: $font-primary;
-    font-size: 1.8rem;
-    margin-bottom: 0.8rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: $color-text-main;
   }
-}
 
-.brand-logos {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-
-  img {
-    max-height: 100px;
-    width: auto;
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: $color-muted;
   }
 }
