@@ -1,42 +1,40 @@
 <div class="order-container">
-  <p-card styleClass="order-card">
-    <ng-template pTemplate="title"> Bestill din neste behandling </ng-template>
+  <section class="order-hero">
+    <h1>Bestill din neste behandling</h1>
+    <p class="lead">
+      Vi er her for å gi deg en pause i hverdagen.<br />
+      Ring oss, eller kontakt oss digitalt – vi gleder oss til å høre fra deg.
+    </p>
+  </section>
 
-    <ng-template pTemplate="subtitle">
-      <div class="subtitle-content">
-        <span class="call-text">Ring oss:</span>
-        <a class="phone-number" [href]="'tel:' + company.phoneInternational">
-          {{ company.phoneInternational }}
-        </a>
-      </div>
-    </ng-template>
+  <section class="order-box">
+    <h2>Ring oss</h2>
+    <a [href]="'tel:' + company.phoneInternational" class="phone-number">
+      {{ company.phoneInternational }}
+    </a>
 
-    <ng-template pTemplate="content">
-      <p>
-        Utenfor våre åpningstider kan du kontakte oss på
-        <a [href]="'mailto:' + company.email">e-post</a> eller via
-        <a [href]="company.facebook" target="_blank">Facebook</a>.
-      </p>
-      <p class="booking-info">
-        Timer som ikke blir benyttet eller blir avbestilt mindre enn 24 timer i
-        forveien, vil bli fakturert.
-      </p>
-    </ng-template>
+    <p class="info-text">
+      Utenfor åpningstider kan du sende oss en
+      <a [href]="'mailto:' + company.email">e-post</a> eller kontakte oss på
+      <a [href]="company.facebook" target="_blank">Facebook</a>.
+    </p>
 
-    <ng-template pTemplate="footer">
-      <p-button
-        label="Kontakt oss"
-        icon="pi pi-envelope"
-        (click)="onContactClick()"
-        styleClass="p-button-sm p-button-outlined"
-      ></p-button>
-      <p-button
-        label="Facebook"
-        icon="pi pi-facebook"
-        styleClass="p-button-sm p-button-text ml-2 footer-facebook"
-        [disabled]="!company.facebook"
+    <div class="button-row">
+      <button (click)="onContactClick()" class="ghost-button">
+        <i class="pi pi-envelope"></i> Kontakt oss
+      </button>
+      <button
         (click)="onFacebookClick()"
-      ></p-button>
-    </ng-template>
-  </p-card>
+        class="ghost-button fb"
+        [disabled]="!company.facebook"
+      >
+        <i class="pi pi-facebook"></i> Facebook
+      </button>
+    </div>
+
+    <p class="disclaimer">
+      Timer som ikke benyttes eller avbestilles senere enn 24 timer i forveien
+      vil bli fakturert.
+    </p>
+  </section>
 </div>

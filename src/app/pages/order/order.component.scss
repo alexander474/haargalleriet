@@ -1,107 +1,134 @@
 @import "variables";
 
 .order-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 80vh;
-  padding: 3rem 1rem;
-  font-family: $font-primary;
-  color: $color-text-main;
-}
-
-.order-card {
-  max-width: 600px;
-  width: 100%;
-  padding: 3rem 2rem;
-  border-radius: $radius-soft;
-  background-color: $color-bg-white;
-  box-shadow: $shadow-medium;
-  text-align: center;
-  border: 1px solid $color-border-light;
-}
-
-.subtitle-content {
+  background-color: $color-accent-dark;
+  min-height: 100vh;
+  padding: 4rem 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.3rem;
-  margin: 1rem 0;
-}
 
-.call-text {
-  font-size: 1rem;
-  font-weight: 500;
-  color: $color-text-main;
-  opacity: 0.8;
-  letter-spacing: 0.03em;
-}
+  .order-hero {
+    text-align: center;
+    color: $color-bg-white;
+    margin-bottom: 2.5rem;
 
-.phone-number {
-  font-size: 2.2rem;
-  font-weight: 600;
-  color: $color-accent;
-  text-decoration: none;
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
 
-  &:hover {
-    text-decoration: underline;
-    color: $color-accent-dark;
+    .lead {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: lighten($color-bg-white, 5%);
+    }
   }
-}
 
-a {
-  color: $color-accent;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
+  .order-box {
+    background-color: $color-bg-white;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
 
-  &:hover {
-    color: $color-accent-dark;
-    text-decoration: underline;
-  }
-}
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: $color-text-main;
+      margin-bottom: 0.75rem;
 
-.booking-info {
-  margin-top: 2rem;
-  font-style: italic;
-  color: $color-muted;
-  font-size: 0.95rem;
-  max-width: 500px;
-  margin-inline: auto;
-}
+      i {
+        margin-right: 0.5rem;
+        color: $color-accent;
+      }
+    }
 
-/* Buttons */
-:host ::ng-deep .p-button {
-  font-family: $font-secondary;
-  font-weight: 500;
-  border-radius: $radius-rounded;
-  padding: 0.6rem 1.4rem;
-}
+    .phone-number {
+      display: block;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: $color-accent;
+      margin-bottom: 1.5rem;
+      text-decoration: none;
+      transition: transform 0.15s ease;
 
-:host ::ng-deep .p-button-outlined {
-  border: 1px solid $color-accent;
-  color: $color-accent;
-  background-color: transparent;
-}
+      &:hover {
+        text-decoration: underline;
+        transform: scale(1.03);
+      }
+    }
 
-:host ::ng-deep .p-button-outlined:hover {
-  background-color: lighten($color-accent, 38%);
-  border-color: $color-accent;
-}
+    .info-text {
+      font-size: 0.95rem;
+      color: $color-text-main;
+      margin-bottom: 2rem;
 
-:host ::ng-deep .p-button-text {
-  color: $color-accent;
-}
+      a {
+        color: $color-accent;
+        font-weight: 500;
 
-:host ::ng-deep .p-button-text:hover {
-  background-color: #f4f0eb;
-}
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
 
-/* Facebook-knapp som i footer */
-:host ::ng-deep .footer-facebook {
-  color: $color-facebook !important;
+    .button-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
 
-  &:hover {
-    background-color: lighten($color-facebook, 40%) !important;
+      .ghost-button {
+        padding: 0.5rem 1.25rem;
+        border: 1px solid $color-border-light;
+        border-radius: 999px;
+        background: transparent;
+        color: $color-text-main;
+        font-weight: 500;
+        font-size: 0.95rem;
+        transition: all 0.2s ease;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        i {
+          font-size: 1rem;
+        }
+
+        &:hover {
+          background-color: lighten($color-accent, 5%);
+          color: $color-bg-white;
+          border-color: $color-accent;
+        }
+
+        &.fb {
+          border-color: $color-accent;
+          color: $color-accent;
+
+          &:hover {
+            background-color: $color-accent;
+            color: $color-bg-white;
+          }
+        }
+
+        &:disabled {
+          opacity: 0.4;
+          cursor: not-allowed;
+        }
+      }
+    }
+
+    .disclaimer {
+      font-size: 0.85rem;
+      color: $color-muted;
+    }
   }
 }
