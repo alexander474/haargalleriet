@@ -1,134 +1,84 @@
 @import "variables";
 
-.order-container {
+.order-simplified {
   background-color: $color-accent-dark;
+  color: $color-bg-white;
+  text-align: center;
+  padding: 5rem 1.5rem;
   min-height: 100vh;
-  padding: 4rem 1.5rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 
-  .order-hero {
-    text-align: center;
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .lead {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 500px;
+  }
+
+  .main-phone {
+    font-size: 2rem;
+    font-weight: bold;
     color: $color-bg-white;
-    margin-bottom: 2.5rem;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 
-    h1 {
-      font-size: 2.2rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    .lead {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: lighten($color-bg-white, 5%);
+    &:hover {
+      text-decoration: underline;
     }
   }
 
-  .order-box {
-    background-color: $color-bg-white;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-    padding: 2rem;
-    max-width: 500px;
-    width: 100%;
-    text-align: center;
-    box-sizing: border-box;
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
 
-    h2 {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: $color-text-main;
-      margin-bottom: 0.75rem;
-
-      i {
-        margin-right: 0.5rem;
-        color: $color-accent;
-      }
-    }
-
-    .phone-number {
-      display: block;
-      font-size: 1.8rem;
-      font-weight: 700;
+    button {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 500;
+      background: $color-bg-white;
       color: $color-accent;
-      margin-bottom: 1.5rem;
-      text-decoration: none;
-      transition: transform 0.15s ease;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
 
       &:hover {
-        text-decoration: underline;
-        transform: scale(1.03);
+        background: darken($color-bg-white, 5%);
+      }
+
+      &:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
       }
     }
+  }
 
-    .info-text {
-      font-size: 0.95rem;
-      color: $color-text-main;
-      margin-bottom: 2rem;
+  .disclaimer {
+    font-size: 0.85rem;
+    color: lighten($color-bg-white, 15%);
+    max-width: 400px;
+  }
+}
 
-      a {
-        color: $color-accent;
-        font-weight: 500;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-
-    .button-row {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-
-      .ghost-button {
-        padding: 0.5rem 1.25rem;
-        border: 1px solid $color-border-light;
-        border-radius: 999px;
-        background: transparent;
-        color: $color-text-main;
-        font-weight: 500;
-        font-size: 0.95rem;
-        transition: all 0.2s ease;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-
-        i {
-          font-size: 1rem;
-        }
-
-        &:hover {
-          background-color: lighten($color-accent, 5%);
-          color: $color-bg-white;
-          border-color: $color-accent;
-        }
-
-        &.fb {
-          border-color: $color-accent;
-          color: $color-accent;
-
-          &:hover {
-            background-color: $color-accent;
-            color: $color-bg-white;
-          }
-        }
-
-        &:disabled {
-          opacity: 0.4;
-          cursor: not-allowed;
-        }
-      }
-    }
-
-    .disclaimer {
-      font-size: 0.85rem;
-      color: $color-muted;
-    }
+@media (max-height: 600px) {
+  .order-simplified {
+    justify-content: flex-start;
+    padding-top: 3rem;
   }
 }

@@ -1,40 +1,21 @@
-<div class="order-container">
-  <section class="order-hero">
-    <h1>Bestill din neste behandling</h1>
-    <p class="lead">
-      Vi er her for å gi deg en pause i hverdagen.<br />
-      Ring oss, eller kontakt oss digitalt – vi gleder oss til å høre fra deg.
-    </p>
-  </section>
+<div class="order-simplified">
+  <h1>Bestill time</h1>
+  <p class="lead">Vi gleder oss til å ta deg imot – kontakt oss direkte:</p>
 
-  <section class="order-box">
-    <h2>Ring oss</h2>
-    <a [href]="'tel:' + company.phoneInternational" class="phone-number">
-      {{ company.phoneInternational }}
-    </a>
+  <a [href]="'tel:' + company.phoneInternational" class="main-phone">
+    <i class="pi pi-phone"></i> {{ company.phoneInternational }}
+  </a>
 
-    <p class="info-text">
-      Utenfor åpningstider kan du sende oss en
-      <a [href]="'mailto:' + company.email">e-post</a> eller kontakte oss på
-      <a [href]="company.facebook" target="_blank">Facebook</a>.
-    </p>
+  <div class="cta-buttons">
+    <button (click)="onContactClick()">
+      <i class="pi pi-envelope"></i> Send e-post
+    </button>
+    <button (click)="onFacebookClick()" [disabled]="!company.facebook">
+      <i class="pi pi-facebook"></i> Facebook
+    </button>
+  </div>
 
-    <div class="button-row">
-      <button (click)="onContactClick()" class="ghost-button">
-        <i class="pi pi-envelope"></i> Kontakt oss
-      </button>
-      <button
-        (click)="onFacebookClick()"
-        class="ghost-button fb"
-        [disabled]="!company.facebook"
-      >
-        <i class="pi pi-facebook"></i> Facebook
-      </button>
-    </div>
-
-    <p class="disclaimer">
-      Timer som ikke benyttes eller avbestilles senere enn 24 timer i forveien
-      vil bli fakturert.
-    </p>
-  </section>
+  <p class="disclaimer">
+    Avbestill senest 24 timer før – ellers faktureres timen.
+  </p>
 </div>
