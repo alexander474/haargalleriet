@@ -23,7 +23,15 @@
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["src/assets"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              {
+                "glob": ".htaccess",
+                "input": "src/assets",
+                "output": "."
+              }
+            ],
             "styles": [
               "node_modules/primeicons/primeicons.css",
               "src/styles.scss"
