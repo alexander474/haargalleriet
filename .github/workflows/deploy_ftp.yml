@@ -20,6 +20,13 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Set build version
+        run: |
+          BUILD_DATE=$(date +'%d.%m.%Y %H:%M')
+          SHORT_SHA=${GITHUB_SHA::7}
+          sed -i "s/version: '1.0.0'/version: '1.0.0-${SHORT_SHA}'/" src/environments/environment.prod.ts
+          sed -i "s/buildDate: new Date().toLocaleDateString('no-NO')/buildDate: '${BUILD_DATE}'/" src/environments/environment.prod.ts
+
       - name: Build Angular project
         run: npm run build -- --base-href /
 
