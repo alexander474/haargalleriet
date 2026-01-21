@@ -28,11 +28,20 @@
 
   <div class="footer-section footer-contact">
     <h4>Kontakt</h4>
-    <p>{{ companyInfo.address }}</p>
-    <a href="tel:{{ companyInfo.phoneInternational }}">{{
-      companyInfo.phoneInternational
-    }}</a>
-    <a href="mailto:{{ companyInfo.email }}">{{ companyInfo.email }}</a>
+    <a
+      [href]="mapsUrl"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="address-link"
+    >
+      <i class="pi pi-map-marker"></i> {{ companyInfo.address }}
+    </a>
+    <a href="tel:{{ companyInfo.phoneInternational }}">
+      <i class="pi pi-phone"></i> {{ companyInfo.phoneInternational }}
+    </a>
+    <a href="mailto:{{ companyInfo.email }}">
+      <i class="pi pi-envelope"></i> {{ companyInfo.email }}
+    </a>
   </div>
 
   <div class="footer-section footer-social">
