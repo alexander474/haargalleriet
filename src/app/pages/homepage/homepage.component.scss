@@ -440,7 +440,17 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    min-height: 550px;
+    height: 70vh;
+    min-height: 450px;
+    max-height: 550px;
+  }
+
+  .hero-bg .hero-image {
+    object-position: center 30%;
+  }
+
+  .scroll-indicator {
+    display: none;
   }
 
   .hero-content {
@@ -509,6 +519,16 @@
 }
 
 @media (max-width: 480px) {
+  .hero-section {
+    height: 60vh;
+    min-height: 400px;
+    max-height: 450px;
+  }
+
+  .hero-bg .hero-image {
+    object-position: center 25%;
+  }
+
   .hero-content .hero-title {
     font-size: 2.5rem;
   }
