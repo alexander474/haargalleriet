@@ -8,13 +8,17 @@
     <div class="hero-overlay"></div>
   </div>
   <div class="hero-content">
-    <span class="hero-badge">Velkommen til</span>
+    <span class="hero-badge">{{ "HOME.WELCOME" | translate }}</span>
     <h1 class="hero-title">Hårgalleriet</h1>
     <p class="hero-location">Fagernes</p>
-    <p class="hero-subtitle">Din personlige frisørsalong siden 1995</p>
+    <p class="hero-subtitle">{{ "HOME.SUBTITLE" | translate }}</p>
     <div class="hero-actions">
-      <a routerLink="/order" class="btn-primary">Bestill time</a>
-      <a routerLink="/services" class="btn-outline">Se tjenester</a>
+      <a routerLink="/order" class="btn-primary">{{
+        "HOME.CTA_BOOK" | translate
+      }}</a>
+      <a routerLink="/services" class="btn-outline">{{
+        "HOME.CTA_SERVICES" | translate
+      }}</a>
     </div>
   </div>
   <div class="scroll-indicator">
@@ -28,15 +32,11 @@
       <img src="assets/images/owners_photo.jpg" alt="Anita og Hilde" />
     </div>
     <div class="about-text">
-      <span class="section-label">Om oss</span>
-      <h2>Personlig service i hyggelige omgivelser</h2>
-      <p>
-        Hårgalleriet Fagernes er en moderne frisørsalong med lang erfaring og
-        varme omgivelser. Vi legger stor vekt på personlig service og høy faglig
-        kvalitet.
-      </p>
+      <span class="section-label">{{ "HOME.ABOUT_LABEL" | translate }}</span>
+      <h2>{{ "HOME.ABOUT_TITLE" | translate }}</h2>
+      <p>{{ "HOME.ABOUT_DESC" | translate }}</p>
       <a routerLink="/about" class="link-arrow">
-        Les mer om oss <i class="pi pi-arrow-right"></i>
+        {{ "HOME.ABOUT_LINK" | translate }} <i class="pi pi-arrow-right"></i>
       </a>
     </div>
   </div>
@@ -45,41 +45,45 @@
 <section class="services-preview">
   <div class="services-container">
     <div class="services-header">
-      <span class="section-label">Våre tjenester</span>
-      <h2>Det vi gjør best</h2>
+      <span class="section-label">{{ "HOME.SERVICES_LABEL" | translate }}</span>
+      <h2>{{ "HOME.SERVICES_TITLE" | translate }}</h2>
     </div>
     <div class="services-grid">
       <div class="service-card">
         <div class="service-icon"><i class="pi pi-star"></i></div>
-        <h3>Klipp</h3>
-        <p>Profesjonell klipp for dame, herre og barn</p>
+        <h3>{{ "HOME.SERVICES_CUT" | translate }}</h3>
+        <p>{{ "HOME.SERVICES_CUT_DESC" | translate }}</p>
       </div>
       <div class="service-card">
         <div class="service-icon"><i class="pi pi-palette"></i></div>
-        <h3>Farge</h3>
-        <p>Farging, striper og balayage</p>
+        <h3>{{ "HOME.SERVICES_COLOR" | translate }}</h3>
+        <p>{{ "HOME.SERVICES_COLOR_DESC" | translate }}</p>
       </div>
       <div class="service-card">
         <div class="service-icon"><i class="pi pi-heart"></i></div>
-        <h3>Brud</h3>
-        <p>Eksklusiv styling for den store dagen</p>
+        <h3>{{ "HOME.SERVICES_BRIDAL" | translate }}</h3>
+        <p>{{ "HOME.SERVICES_BRIDAL_DESC" | translate }}</p>
       </div>
       <div class="service-card">
         <div class="service-icon"><i class="pi pi-sparkles"></i></div>
-        <h3>Behandlinger</h3>
-        <p>Kur, permanent og pleie</p>
+        <h3>{{ "HOME.SERVICES_TREATMENT" | translate }}</h3>
+        <p>{{ "HOME.SERVICES_TREATMENT_DESC" | translate }}</p>
       </div>
     </div>
-    <a routerLink="/services" class="btn-outline-dark">Se alle tjenester</a>
+    <a routerLink="/services" class="btn-outline-dark">{{
+      "HOME.SERVICES_LINK" | translate
+    }}</a>
   </div>
 </section>
 
 <section class="cta-section">
   <div class="cta-container">
     <div class="cta-text">
-      <h2>Klar for en ny look?</h2>
-      <p>Book din time i dag og la oss ta vare på deg.</p>
+      <h2>{{ "HOME.CTA_TITLE" | translate }}</h2>
+      <p>{{ "HOME.CTA_DESC" | translate }}</p>
     </div>
-    <a routerLink="/order" class="btn-white">Bestill time</a>
+    <a routerLink="/order" class="btn-white">{{
+      "HOME.CTA_BOOK" | translate
+    }}</a>
   </div>
 </section>

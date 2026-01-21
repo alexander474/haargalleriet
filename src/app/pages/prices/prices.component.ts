@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
 import { PriceItem } from '../../models/PriceItem.model';
 import { PriceListComponent } from '../../components/price-list/price-list.component';
 import { ButtonModule } from 'primeng/button';
@@ -14,21 +16,42 @@ interface PriceData {
 @Component({
   selector: 'app-prices',
   standalone: true,
-  imports: [HttpClientModule, PriceListComponent, ButtonModule],
+  imports: [
+    HttpClientModule,
+    PriceListComponent,
+    ButtonModule,
+    TranslateModule,
+  ],
   templateUrl: './prices.component.html',
   styleUrls: ['./prices.component.scss'],
 })
-export class PricesComponent implements OnInit {
+export class PricesComponent implements OnInit, OnDestroy {
   priceItems: PriceItem[] = [];
+  private langSubscription?: Subscription;
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private translate: TranslateService,
+  ) {}
 
   ngOnInit(): void {
     this.loadPriceData();
+
+    // Reload prices when language changes
+    this.langSubscription = this.translate.onLangChange.subscribe(() => {
+      this.loadPriceData();
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.langSubscription?.unsubscribe();
   }
 
   loadPriceData(): void {
-    this.http.get<PriceData>('assets/prices/prices.json').subscribe(
+    const lang = this.translate.currentLang || 'no';
+    const priceFile = `assets/prices/prices-${lang}.json`;
+
+    this.http.get<PriceData>(priceFile).subscribe(
       (data: PriceData) => {
         const priceItems: PriceItem[] = [];
 
@@ -45,7 +68,7 @@ export class PricesComponent implements OnInit {
         this.priceItems = priceItems;
       },
       (error) => {
-        console.error('Feil under lasting av prisliste', error);
+        console.error('Error loading price list', error);
       },
     );
   }

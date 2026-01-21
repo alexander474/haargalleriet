@@ -205,9 +205,19 @@
   }
 }
 
+.mobile-controls {
+  display: none;
+  align-items: center;
+  gap: 1rem;
+}
+
 @media screen and (max-width: 768px) {
   .desktop-menu {
     display: none;
+  }
+
+  .mobile-controls {
+    display: flex;
   }
 
   .mobile-menu-icon {

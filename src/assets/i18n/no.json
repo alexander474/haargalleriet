@@ -1,0 +1,129 @@
+{
+  "NAV": {
+    "HOME": "Hjem",
+    "ABOUT": "Om Oss",
+    "SERVICES": "Tjenester",
+    "PRICES": "Priser",
+    "CONTACT": "Bestill Time"
+  },
+  "HOME": {
+    "WELCOME": "Velkommen til",
+    "SUBTITLE": "Din personlige frisørsalong siden 1995",
+    "CTA_BOOK": "Bestill time",
+    "CTA_SERVICES": "Se tjenester",
+    "ABOUT_LABEL": "Om oss",
+    "ABOUT_TITLE": "Personlig service i hyggelige omgivelser",
+    "ABOUT_DESC": "Hårgalleriet Fagernes er en moderne frisørsalong med lang erfaring og varme omgivelser. Vi legger stor vekt på personlig service og høy faglig kvalitet.",
+    "ABOUT_LINK": "Les mer om oss",
+    "SERVICES_LABEL": "Våre tjenester",
+    "SERVICES_TITLE": "Det vi gjør best",
+    "SERVICES_CUT": "Klipp",
+    "SERVICES_CUT_DESC": "Profesjonell klipp for dame, herre og barn",
+    "SERVICES_COLOR": "Farge",
+    "SERVICES_COLOR_DESC": "Farging, striper og balayage",
+    "SERVICES_BRIDAL": "Brud",
+    "SERVICES_BRIDAL_DESC": "Eksklusiv styling for den store dagen",
+    "SERVICES_TREATMENT": "Behandlinger",
+    "SERVICES_TREATMENT_DESC": "Kur, permanent og pleie",
+    "SERVICES_LINK": "Se alle tjenester",
+    "CTA_TITLE": "Klar for en ny look?",
+    "CTA_DESC": "Book din time i dag og la oss ta vare på deg."
+  },
+  "FOOTER": {
+    "HOURS": "Åpningstider",
+    "CONTACT": "Kontakt",
+    "FOLLOW_US": "Følg oss"
+  },
+  "ABOUT": {
+    "LABEL": "Om oss",
+    "TITLE": "Velkommen til Hårgalleriet",
+    "SUBTITLE": "Din frisørsalong i hjertet av Fagernes siden 1995",
+    "HISTORY_LABEL": "Vår historie",
+    "HISTORY_TITLE": "Erfaring og lidenskap",
+    "HISTORY_TEXT": "Hårgalleriet Fagernes er en frisørsalong som holder til i flotte lokaler midt i hyggelige omgivelser. Vi ønsker å gi kundene våre en opplevelse av velvære og profesjonell behandling, utført av et dyktig og engasjert team. Hos oss er du alltid velkommen!",
+    "TEAM_LABEL": "Vårt team",
+    "TEAM_TITLE": "Møt våre frisører"
+  },
+  "SERVICES": {
+    "LABEL": "Behandlinger",
+    "TITLE": "Våre tjenester",
+    "SUBTITLE": "Profesjonell hårpleie tilpasset dine ønsker",
+    "FOOTNOTE": "Vi utfører flere typer kurer som for eksempel Olaplex og Kérastase kur",
+    "SEE_PRICES": "Se priser",
+    "TYPES": {
+      "HAIRCUT": {
+        "NAME": "Klipp av Barn/Dame/Herre",
+        "DESC": "Profesjonell klipp for barn, dame og herre – skreddersydd etter dine ønsker og stil."
+      },
+      "BROW_TINT": {
+        "NAME": "Farging av vipper/bryn",
+        "DESC": "Form og farge som fremhever dine naturlige trekk. Perfekt for et våkent blikk."
+      },
+      "PERM": {
+        "NAME": "Permanent",
+        "DESC": "Skap varig tekstur og volum med vår skånsomme permanentbehandling."
+      },
+      "BRIDAL": {
+        "NAME": "Brudepynt",
+        "DESC": "Eksklusiv styling for den store dagen – vi sørger for at du stråler som brud."
+      },
+      "COLOR": {
+        "NAME": "Farging og striper",
+        "DESC": "Friske opp eller forvandle håret ditt med farge, striper eller balayage."
+      },
+      "LASH": {
+        "NAME": "Vippeextension",
+        "DESC": "Få fyldige, naturlige vipper som fremhever øynene dine uten behov for mascara."
+      },
+      "EAR": {
+        "NAME": "Hull i øre",
+        "DESC": "Trygg og profesjonell hulltaking i ørene med fokus på hygiene og komfort."
+      },
+      "TREATMENT": {
+        "NAME": "Kur med eller uten massage",
+        "DESC": "Skreddersydde hårkurer – med eller uten massasje – for et sunt og glansfullt hår."
+      }
+    }
+  },
+  "PRICES": {
+    "LABEL": "Prisliste",
+    "TITLE": "Våre behandlinger",
+    "SUBTITLE": "Alle våre behandlinger er utført med omtanke, ekspertise og øye for detaljer",
+    "DISCLAIMER": "Prisene er veiledende og kan variere basert på hårlengde og behandlingstid",
+    "FROM": "fra"
+  },
+  "ORDER": {
+    "BADGE": "Kontakt oss",
+    "TITLE": "Bestill time",
+    "LEAD": "Vi gleder oss til å ta deg imot!",
+    "PHONE_LABEL": "Ring oss direkte",
+    "PHONE_HINT": "Man-Fre: 09:00-16:30 · Lør: 09:00-14:00",
+    "SEND_EMAIL": "Send e-post",
+    "DISCLAIMER": "Avbestill senest 24 timer før – ellers faktureres timen.",
+    "HOURS_TITLE": "Åpningstider",
+    "HOURS_WEEKDAY": "Man-Fre: 09:00 - 16:30",
+    "HOURS_SAT": "Lørdag: 09:00 - 14:00",
+    "ADDRESS_TITLE": "Adresse",
+    "OPEN_MAPS": "Åpne i Google Maps",
+    "WELCOME_TITLE": "Velkommen",
+    "WELCOME_DESC": "Vi tar imot alle med åpne armer!"
+  },
+  "NOTFOUND": {
+    "TITLE": "Oops! Siden finnes ikke",
+    "DESC": "Beklager, men siden du leter etter eksisterer ikke eller har blitt flyttet.",
+    "HOME": "Tilbake til forsiden",
+    "CONTACT": "Kontakt oss"
+  },
+  "COMMON": {
+    "CLOSED": "Stengt",
+    "DAYS": {
+      "MONDAY": "Mandag",
+      "TUESDAY": "Tirsdag",
+      "WEDNESDAY": "Onsdag",
+      "THURSDAY": "Torsdag",
+      "FRIDAY": "Fredag",
+      "SATURDAY": "Lørdag",
+      "SUNDAY": "Søndag"
+    }
+  }
+}

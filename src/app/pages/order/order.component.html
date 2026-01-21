@@ -1,22 +1,22 @@
 <section class="order-page">
   <div class="order-hero">
     <div class="order-content">
-      <span class="order-badge">Kontakt oss</span>
-      <h1>Bestill time</h1>
-      <p class="lead">Vi gleder oss til å ta deg imot!</p>
+      <span class="order-badge">{{ "ORDER.BADGE" | translate }}</span>
+      <h1>{{ "ORDER.TITLE" | translate }}</h1>
+      <p class="lead">{{ "ORDER.LEAD" | translate }}</p>
 
       <div class="phone-box">
-        <div class="phone-label">Ring oss direkte</div>
+        <div class="phone-label">{{ "ORDER.PHONE_LABEL" | translate }}</div>
         <a [href]="phoneUrl" class="phone-number">
           <i class="pi pi-phone"></i>
           <span>{{ company.phoneInternational }}</span>
         </a>
-        <div class="phone-hint">Man-Fre: 09:00-16:30 · Lør: 09:00-14:00</div>
+        <div class="phone-hint">{{ "ORDER.PHONE_HINT" | translate }}</div>
       </div>
 
       <div class="cta-buttons">
         <a [href]="emailUrl" class="btn-secondary">
-          <i class="pi pi-envelope"></i> Send e-post
+          <i class="pi pi-envelope"></i> {{ "ORDER.SEND_EMAIL" | translate }}
         </a>
         <a
           [href]="company.facebook"
@@ -31,7 +31,7 @@
 
       <p class="disclaimer">
         <i class="pi pi-info-circle"></i>
-        Avbestill senest 24 timer før – ellers faktureres timen.
+        {{ "ORDER.DISCLAIMER" | translate }}
       </p>
     </div>
   </div>
@@ -41,9 +41,9 @@
       <div class="info-icon">
         <i class="pi pi-clock"></i>
       </div>
-      <h3>Åpningstider</h3>
-      <p>Man-Fre: 09:00 - 16:30</p>
-      <p>Lørdag: 09:00 - 14:00</p>
+      <h3>{{ "ORDER.HOURS_TITLE" | translate }}</h3>
+      <p>{{ "ORDER.HOURS_WEEKDAY" | translate }}</p>
+      <p>{{ "ORDER.HOURS_SAT" | translate }}</p>
     </div>
     <a
       [href]="mapsUrl"
@@ -54,18 +54,18 @@
       <div class="info-icon">
         <i class="pi pi-map-marker"></i>
       </div>
-      <h3>Adresse</h3>
+      <h3>{{ "ORDER.ADDRESS_TITLE" | translate }}</h3>
       <p>{{ company.address }}</p>
       <span class="card-link"
-        >Åpne i Google Maps <i class="pi pi-external-link"></i
+        >{{ "ORDER.OPEN_MAPS" | translate }} <i class="pi pi-external-link"></i
       ></span>
     </a>
     <div class="info-card">
       <div class="info-icon">
         <i class="pi pi-heart"></i>
       </div>
-      <h3>Velkommen</h3>
-      <p>Vi tar imot alle med åpne armer!</p>
+      <h3>{{ "ORDER.WELCOME_TITLE" | translate }}</h3>
+      <p>{{ "ORDER.WELCOME_DESC" | translate }}</p>
     </div>
   </div>
 </section>

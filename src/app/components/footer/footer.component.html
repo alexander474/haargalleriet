@@ -1,33 +1,40 @@
 <footer class="my-footer">
   <div class="footer-section footer-hours">
-    <h4>Åpningstider</h4>
+    <h4>{{ "FOOTER.HOURS" | translate }}</h4>
     <ul class="hours-grid">
       <li>
-        <span>Mandag</span><span>{{ companyInfo.hours.monday }}</span>
+        <span>{{ "COMMON.DAYS.MONDAY" | translate }}</span
+        ><span>{{ companyInfo.hours.monday }}</span>
       </li>
       <li>
-        <span>Tirsdag</span><span>{{ companyInfo.hours.tuesday }}</span>
+        <span>{{ "COMMON.DAYS.TUESDAY" | translate }}</span
+        ><span>{{ companyInfo.hours.tuesday }}</span>
       </li>
       <li>
-        <span>Onsdag</span><span>{{ companyInfo.hours.wednesday }}</span>
+        <span>{{ "COMMON.DAYS.WEDNESDAY" | translate }}</span
+        ><span>{{ companyInfo.hours.wednesday }}</span>
       </li>
       <li>
-        <span>Torsdag</span><span>{{ companyInfo.hours.thursday }}</span>
+        <span>{{ "COMMON.DAYS.THURSDAY" | translate }}</span
+        ><span>{{ companyInfo.hours.thursday }}</span>
       </li>
       <li>
-        <span>Fredag</span><span>{{ companyInfo.hours.friday }}</span>
+        <span>{{ "COMMON.DAYS.FRIDAY" | translate }}</span
+        ><span>{{ companyInfo.hours.friday }}</span>
       </li>
       <li>
-        <span>Lørdag</span><span>{{ companyInfo.hours.saturday }}</span>
+        <span>{{ "COMMON.DAYS.SATURDAY" | translate }}</span
+        ><span>{{ companyInfo.hours.saturday }}</span>
       </li>
       <li>
-        <span>Søndag</span><span>{{ companyInfo.hours.sunday }}</span>
+        <span>{{ "COMMON.DAYS.SUNDAY" | translate }}</span
+        ><span>{{ companyInfo.hours.sunday }}</span>
       </li>
     </ul>
   </div>
 
   <div class="footer-section footer-contact">
-    <h4>Kontakt</h4>
+    <h4>{{ "FOOTER.CONTACT" | translate }}</h4>
     <a
       [href]="mapsUrl"
       target="_blank"
@@ -45,7 +52,7 @@
   </div>
 
   <div class="footer-section footer-social">
-    <h4>Følg oss</h4>
+    <h4>{{ "FOOTER.FOLLOW_US" | translate }}</h4>
     <a
       class="social-link"
       *ngIf="companyInfo.facebook"

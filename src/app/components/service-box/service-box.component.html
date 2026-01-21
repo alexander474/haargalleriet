@@ -2,7 +2,9 @@
   <div class="icon-circle">
     <i class="pi" [ngClass]="icon"></i>
   </div>
-  <div class="title">{{ name }}</div>
-  <p>{{ description }}</p>
-  <span class="view-prices">Se priser <i class="pi pi-arrow-right"></i></span>
+  <div class="title">{{ nameKey | translate }}</div>
+  <p>{{ descKey | translate }}</p>
+  <span class="view-prices"
+    >{{ "SERVICES.SEE_PRICES" | translate }} <i class="pi pi-arrow-right"></i
+  ></span>
 </a>

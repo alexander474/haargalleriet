@@ -16,24 +16,28 @@
         [routerLinkActiveOptions]="{ exact: item.routerLink === '/' }"
         class="header-link"
       >
-        {{ item.label }}
+        {{ item.labelKey | translate }}
       </a>
       <p-button
-        label="BESTILL TIME"
+        [label]="'NAV.CONTACT' | translate"
         routerLink="/order"
         styleClass="custom-button"
       ></p-button>
+      <app-language-switcher></app-language-switcher>
     </nav>
 
-    <button
-      class="mobile-menu-icon"
-      [class.open]="showMobileMenu"
-      (click)="toggleMobileMenu()"
-    >
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
+    <div class="mobile-controls">
+      <app-language-switcher></app-language-switcher>
+      <button
+        class="mobile-menu-icon"
+        [class.open]="showMobileMenu"
+        (click)="toggleMobileMenu()"
+      >
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
   </div>
 
   <nav class="mobile-menu" [class.show]="showMobileMenu">
@@ -45,10 +49,10 @@
       class="mobile-link"
       (click)="toggleMobileMenu()"
     >
-      {{ item.label }}
+      {{ item.labelKey | translate }}
     </a>
     <a routerLink="/order" class="mobile-cta" (click)="toggleMobileMenu()">
-      Bestill time
+      {{ "NAV.CONTACT" | translate }}
     </a>
   </nav>
 </header>

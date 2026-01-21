@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 import { companyInfo } from '../../models/CompanyInfo.model';
 import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss'],
 })

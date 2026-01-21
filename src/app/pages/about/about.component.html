@@ -1,18 +1,18 @@
 <section class="hero">
   <div class="hero-content">
-    <span class="label">Om oss</span>
-    <h1>Velkommen til Hårgalleriet</h1>
-    <p>Din frisørsalong i hjertet av Fagernes siden 1995</p>
+    <span class="label">{{ "ABOUT.LABEL" | translate }}</span>
+    <h1>{{ "ABOUT.TITLE" | translate }}</h1>
+    <p>{{ "ABOUT.SUBTITLE" | translate }}</p>
   </div>
 </section>
 
 <section class="about-container">
   <div class="intro-section">
     <div class="intro-content">
-      <span class="section-label">Vår historie</span>
-      <h2 class="title">Erfaring og lidenskap</h2>
+      <span class="section-label">{{ "ABOUT.HISTORY_LABEL" | translate }}</span>
+      <h2 class="title">{{ "ABOUT.HISTORY_TITLE" | translate }}</h2>
       <p class="intro-text">
-        {{ companyInfo.about }}
+        {{ "ABOUT.HISTORY_TEXT" | translate }}
       </p>
     </div>
 
@@ -25,8 +25,8 @@
   </div>
 
   <div class="team-wrapper">
-    <span class="section-label">Vårt team</span>
-    <h2 class="team-title">Møt våre frisører</h2>
+    <span class="section-label">{{ "ABOUT.TEAM_LABEL" | translate }}</span>
+    <h2 class="team-title">{{ "ABOUT.TEAM_TITLE" | translate }}</h2>
     <app-team-section [employees]="employees"></app-team-section>
   </div>
 </section>

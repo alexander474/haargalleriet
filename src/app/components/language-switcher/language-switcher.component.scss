@@ -1,0 +1,27 @@
+@use "variables" as *;
+
+.language-switcher {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.25rem 0.4rem;
+  border-radius: 4px;
+  opacity: 0.5;
+  transition: all 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+    background: rgba($color-primary, 0.1);
+  }
+
+  &.active {
+    opacity: 1;
+    background: rgba($color-primary, 0.15);
+  }
+}

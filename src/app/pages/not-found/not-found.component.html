@@ -1,17 +1,14 @@
 <section class="not-found">
   <div class="content">
     <span class="error-code">404</span>
-    <h1>Oops! Siden finnes ikke</h1>
-    <p>
-      Beklager, men siden du leter etter eksisterer ikke eller har blitt
-      flyttet.
-    </p>
+    <h1>{{ "NOTFOUND.TITLE" | translate }}</h1>
+    <p>{{ "NOTFOUND.DESC" | translate }}</p>
     <div class="actions">
       <a routerLink="/" class="btn-primary">
-        <i class="pi pi-home"></i> Tilbake til forsiden
+        <i class="pi pi-home"></i> {{ "NOTFOUND.HOME" | translate }}
       </a>
       <a routerLink="/order" class="btn-secondary">
-        <i class="pi pi-phone"></i> Kontakt oss
+        <i class="pi pi-phone"></i> {{ "NOTFOUND.CONTACT" | translate }}
       </a>
     </div>
   </div>

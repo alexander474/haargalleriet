@@ -1,0 +1,129 @@
+{
+  "NAV": {
+    "HOME": "Home",
+    "ABOUT": "About Us",
+    "SERVICES": "Services",
+    "PRICES": "Prices",
+    "CONTACT": "Book Appointment"
+  },
+  "HOME": {
+    "WELCOME": "Welcome to",
+    "SUBTITLE": "Your personal hair salon since 1995",
+    "CTA_BOOK": "Book appointment",
+    "CTA_SERVICES": "See services",
+    "ABOUT_LABEL": "About us",
+    "ABOUT_TITLE": "Personal service in a warm atmosphere",
+    "ABOUT_DESC": "Hårgalleriet Fagernes is a modern hair salon with long experience and a warm atmosphere. We focus on personal service and high professional quality.",
+    "ABOUT_LINK": "Read more about us",
+    "SERVICES_LABEL": "Our services",
+    "SERVICES_TITLE": "What we do best",
+    "SERVICES_CUT": "Haircuts",
+    "SERVICES_CUT_DESC": "Professional cuts for women, men and children",
+    "SERVICES_COLOR": "Coloring",
+    "SERVICES_COLOR_DESC": "Coloring, highlights and balayage",
+    "SERVICES_BRIDAL": "Bridal",
+    "SERVICES_BRIDAL_DESC": "Exclusive styling for your big day",
+    "SERVICES_TREATMENT": "Treatments",
+    "SERVICES_TREATMENT_DESC": "Treatment, perm and care",
+    "SERVICES_LINK": "See all services",
+    "CTA_TITLE": "Ready for a new look?",
+    "CTA_DESC": "Book your appointment today and let us take care of you."
+  },
+  "FOOTER": {
+    "HOURS": "Opening Hours",
+    "CONTACT": "Contact",
+    "FOLLOW_US": "Follow Us"
+  },
+  "ABOUT": {
+    "LABEL": "About us",
+    "TITLE": "Welcome to Hårgalleriet",
+    "SUBTITLE": "Your hair salon in the heart of Fagernes since 1995",
+    "HISTORY_LABEL": "Our history",
+    "HISTORY_TITLE": "Experience and passion",
+    "HISTORY_TEXT": "Hårgalleriet Fagernes is a hair salon located in beautiful premises in a warm atmosphere. We want to give our customers an experience of well-being and professional treatment, performed by a skilled and dedicated team. You are always welcome with us!",
+    "TEAM_LABEL": "Our team",
+    "TEAM_TITLE": "Meet our hairdressers"
+  },
+  "SERVICES": {
+    "LABEL": "Treatments",
+    "TITLE": "Our Services",
+    "SUBTITLE": "Professional hair care tailored to your wishes",
+    "FOOTNOTE": "We offer several types of treatments such as Olaplex and Kérastase treatments",
+    "SEE_PRICES": "See prices",
+    "TYPES": {
+      "HAIRCUT": {
+        "NAME": "Haircut for Children/Women/Men",
+        "DESC": "Professional haircuts for children, women and men – tailored to your wishes and style."
+      },
+      "BROW_TINT": {
+        "NAME": "Lash/Brow Tinting",
+        "DESC": "Shape and color that enhances your natural features. Perfect for an alert look."
+      },
+      "PERM": {
+        "NAME": "Perm",
+        "DESC": "Create lasting texture and volume with our gentle perm treatment."
+      },
+      "BRIDAL": {
+        "NAME": "Bridal Styling",
+        "DESC": "Exclusive styling for your big day – we make sure you shine as a bride."
+      },
+      "COLOR": {
+        "NAME": "Coloring and Highlights",
+        "DESC": "Freshen up or transform your hair with color, highlights or balayage."
+      },
+      "LASH": {
+        "NAME": "Lash Extensions",
+        "DESC": "Get full, natural lashes that enhance your eyes without the need for mascara."
+      },
+      "EAR": {
+        "NAME": "Ear Piercing",
+        "DESC": "Safe and professional ear piercing with focus on hygiene and comfort."
+      },
+      "TREATMENT": {
+        "NAME": "Treatment with or without massage",
+        "DESC": "Customized hair treatments – with or without massage – for healthy, shiny hair."
+      }
+    }
+  },
+  "PRICES": {
+    "LABEL": "Price List",
+    "TITLE": "Our Treatments",
+    "SUBTITLE": "All our treatments are performed with care, expertise and attention to detail",
+    "DISCLAIMER": "Prices are indicative and may vary based on hair length and treatment time",
+    "FROM": "from"
+  },
+  "ORDER": {
+    "BADGE": "Contact us",
+    "TITLE": "Book Appointment",
+    "LEAD": "We look forward to welcoming you!",
+    "PHONE_LABEL": "Call us directly",
+    "PHONE_HINT": "Mon-Fri: 09:00-16:30 · Sat: 09:00-14:00",
+    "SEND_EMAIL": "Send email",
+    "DISCLAIMER": "Cancel at least 24 hours in advance – otherwise you will be charged.",
+    "HOURS_TITLE": "Opening Hours",
+    "HOURS_WEEKDAY": "Mon-Fri: 09:00 - 16:30",
+    "HOURS_SAT": "Saturday: 09:00 - 14:00",
+    "ADDRESS_TITLE": "Address",
+    "OPEN_MAPS": "Open in Google Maps",
+    "WELCOME_TITLE": "Welcome",
+    "WELCOME_DESC": "We welcome everyone with open arms!"
+  },
+  "NOTFOUND": {
+    "TITLE": "Oops! Page not found",
+    "DESC": "Sorry, but the page you are looking for does not exist or has been moved.",
+    "HOME": "Back to home",
+    "CONTACT": "Contact us"
+  },
+  "COMMON": {
+    "CLOSED": "Closed",
+    "DAYS": {
+      "MONDAY": "Monday",
+      "TUESDAY": "Tuesday",
+      "WEDNESDAY": "Wednesday",
+      "THURSDAY": "Thursday",
+      "FRIDAY": "Friday",
+      "SATURDAY": "Saturday",
+      "SUNDAY": "Sunday"
+    }
+  }
+}

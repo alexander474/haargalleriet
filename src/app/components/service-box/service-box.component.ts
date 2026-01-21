@@ -1,16 +1,17 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-service-box',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, TranslateModule],
   templateUrl: './service-box.component.html',
   styleUrls: ['./service-box.component.scss'],
 })
 export class ServiceBoxComponent {
-  @Input() name: string = '';
-  @Input() description: string = '';
+  @Input() nameKey: string = '';
+  @Input() descKey: string = '';
   @Input() icon: string = 'pi-star';
 }
