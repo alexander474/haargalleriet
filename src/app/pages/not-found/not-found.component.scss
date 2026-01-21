@@ -1,4 +1,4 @@
-@import "../../../styles/variables";
+@use "../../../styles/variables" as *;
 
 .not-found {
   min-height: 80vh;
@@ -18,9 +18,9 @@
   font-family: "Playfair Display", serif;
   font-size: 8rem;
   font-weight: 700;
-  color: $rose-gold-primary;
+  color: $color-primary;
   line-height: 1;
-  text-shadow: 2px 4px 8px rgba($rose-gold-primary, 0.2);
+  text-shadow: 2px 4px 8px rgba($color-primary, 0.2);
   display: block;
   margin-bottom: 1rem;
 
@@ -32,7 +32,7 @@
 h1 {
   font-family: "Playfair Display", serif;
   font-size: 2rem;
-  color: $rose-gold-dark;
+  color: $color-primary-dark;
   margin-bottom: 1rem;
 
   @media (max-width: 480px) {
@@ -75,25 +75,25 @@ p {
 }
 
 .btn-primary {
-  background: $rose-gold-primary;
+  background: $color-primary;
   color: white;
-  border: 2px solid $rose-gold-primary;
+  border: 2px solid $color-primary;
 
   &:hover {
-    background: $rose-gold-dark;
-    border-color: $rose-gold-dark;
+    background: $color-primary-dark;
+    border-color: $color-primary-dark;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba($rose-gold-primary, 0.3);
+    box-shadow: 0 4px 12px rgba($color-primary, 0.3);
   }
 }
 
 .btn-secondary {
   background: transparent;
-  color: $rose-gold-primary;
-  border: 2px solid $rose-gold-primary;
+  color: $color-primary;
+  border: 2px solid $color-primary;
 
   &:hover {
-    background: rgba($rose-gold-primary, 0.1);
+    background: rgba($color-primary, 0.1);
     transform: translateY(-2px);
   }
 }

@@ -16,9 +16,11 @@
       content="frisør, fagernes, valdres, hårsalong, klipp, farge, styling, brud, vippeextension"
     />
     <meta name="author" content="Hårgalleriet Fagernes" />
+    <link rel="canonical" href="https://haargalleriet.no/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://haargalleriet.no/" />
     <meta
       property="og:title"
       content="Hårgalleriet Fagernes | Frisørsalong i Valdres"
@@ -27,11 +29,102 @@
       property="og:description"
       content="Din personlige frisørsalong i hjertet av Valdres siden 1995. Profesjonell hårpleie og styling."
     />
-    <meta property="og:image" content="assets/images/employees_photo.jpg" />
+    <meta
+      property="og:image"
+      content="https://haargalleriet.no/assets/images/employees_photo.jpg"
+    />
     <meta property="og:locale" content="nb_NO" />
+    <meta property="og:site_name" content="Hårgalleriet Fagernes" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Hårgalleriet Fagernes | Frisørsalong i Valdres"
+    />
+    <meta
+      name="twitter:description"
+      content="Din personlige frisørsalong i hjertet av Valdres siden 1995."
+    />
+    <meta
+      name="twitter:image"
+      content="https://haargalleriet.no/assets/images/employees_photo.jpg"
+    />
 
     <!-- Theme Color -->
     <meta name="theme-color" content="#c9a087" />
+
+    <!-- Structured Data - HairSalon (Schema.org) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HairSalon",
+        "name": "Hårgalleriet Fagernes",
+        "description": "Din personlige frisørsalong i hjertet av Valdres siden 1995. Profesjonell hårpleie, farging, klipp og styling.",
+        "url": "https://haargalleriet.no",
+        "telephone": "+47 61 36 04 78",
+        "email": "haargalleri@online.no",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jernbanevegen 4",
+          "addressLocality": "Fagernes",
+          "postalCode": "2900",
+          "addressCountry": "NO"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "60.9856",
+          "longitude": "9.2358"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "17:00"
+          }
+        ],
+        "priceRange": "$$",
+        "image": "https://haargalleriet.no/assets/images/employees_photo.jpg",
+        "areaServed": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": "60.9856",
+            "longitude": "9.2358"
+          },
+          "geoRadius": "50000"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Frisørtjenester",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": "Service", "name": "Dameklipp" }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": "Service", "name": "Herreklipp" }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": "Service", "name": "Farge" }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": "Service", "name": "Brudestyling" }
+            }
+          ]
+        }
+      }
+    </script>
 
     <link
       rel="icon"

@@ -1,0 +1,12 @@
+# Robots.txt for Hårgalleriet Fagernes
+# https://haargalleriet.no
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://haargalleriet.no/sitemap.xml
+
+# Disallow admin/system paths
+Disallow: /api/
+Disallow: /*.json$
