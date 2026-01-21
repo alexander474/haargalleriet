@@ -1,15 +1,25 @@
-<h1 class="title">Våre tjenester</h1>
-<div class="title-underline"></div>
+<section class="page-header">
+  <div class="header-content">
+    <span class="section-label">Behandlinger</span>
+    <h1 class="title">Våre tjenester</h1>
+    <p class="subtitle">Profesjonell hårpleie tilpasset dine ønsker</p>
+  </div>
+</section>
 
-<div class="services-grid">
-  <app-service-box
-    *ngFor="let s of services"
-    [name]="s.label"
-    [description]="s.description"
-  >
-  </app-service-box>
-</div>
+<section class="services-content">
+  <div class="services-grid">
+    <app-service-box
+      *ngFor="let s of services"
+      [name]="s.label"
+      [description]="s.description"
+    >
+    </app-service-box>
+  </div>
 
-<p class="footnote">
-  Vi utfører flere typer kurer som for eksempel Olaplex og Kérastase kur
-</p>
+  <div class="footnote">
+    <i class="pi pi-info-circle"></i>
+    <p>
+      Vi utfører flere typer kurer som for eksempel Olaplex og Kérastase kur
+    </p>
+  </div>
+</section>

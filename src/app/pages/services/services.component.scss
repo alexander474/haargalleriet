@@ -1,48 +1,119 @@
 @import "variables";
 
-h1 {
-  font-family: $font-primary;
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  color: $color-text-main;
+// Page Header
+.page-header {
+  background: linear-gradient(135deg, $color-bg 0%, $color-neutral-100 100%);
+  padding: 5rem 2rem 4rem;
   text-align: center;
-  letter-spacing: 0.03em;
-  text-transform: none;
+  border-bottom: 1px solid $color-neutral-200;
+
+  .header-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    display: inline-block;
+    color: $color-primary;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.75rem;
+  }
+
+  .title {
+    font-family: $font-secondary;
+    font-size: 3rem;
+    font-weight: 600;
+    color: $color-text;
+    margin: 0 0 1rem;
+  }
+
+  .subtitle {
+    font-size: 1.15rem;
+    color: $color-text-muted;
+    margin: 0;
+    line-height: 1.7;
+  }
 }
 
-.title-underline {
-  width: 60px;
-  height: 2px;
-  background-color: $color-accent;
-  margin: 0 auto 2rem auto;
+// Services Content
+.services-content {
+  padding: 4rem 2rem 5rem;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
-// 🧱 Grid-oppsett for tjenester (kan også brukes til cards etc.)
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: $spacing-lg;
-  margin: 0 auto $spacing-lg auto;
-  justify-content: center;
-  max-width: $breakpoint-xl;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 4rem;
 }
 
-// 📌 Fotnote / tilleggsinfo
 .footnote {
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  color: $color-muted;
-  font-style: italic;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.5rem 2rem;
+  background-color: $color-neutral-100;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+
+  i {
+    color: $color-primary;
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+    color: $color-text-muted;
+    font-style: italic;
+    margin: 0;
+  }
 }
 
-@media screen and (max-width: $breakpoint-sm) {
-  h1 {
-    font-size: 2rem;
+@media screen and (max-width: 1200px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-header {
+    padding: 3rem 1.5rem;
+
+    .title {
+      font-size: 2rem;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+    }
+  }
+
+  .services-content {
+    padding: 3rem 1.5rem;
   }
 
   .services-grid {
     grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto 3rem;
+  }
+
+  .footnote {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
   }
 }

@@ -1,21 +1,57 @@
-<div class="order-simplified">
-  <h1>Bestill time</h1>
-  <p class="lead">Vi gleder oss til å ta deg imot – kontakt oss direkte:</p>
+<section class="order-page">
+  <div class="order-hero">
+    <div class="order-content">
+      <span class="order-badge">Kontakt oss</span>
+      <h1>Bestill time</h1>
+      <p class="lead">Vi gleder oss til å ta deg imot – kontakt oss direkte:</p>
 
-  <a [href]="'tel:' + company.phoneInternational" class="main-phone">
-    <i class="pi pi-phone"></i> {{ company.phoneInternational }}
-  </a>
+      <a [href]="'tel:' + company.phoneInternational" class="main-phone">
+        <i class="pi pi-phone"></i>
+        <span>{{ company.phoneInternational }}</span>
+      </a>
 
-  <div class="cta-buttons">
-    <button (click)="onContactClick()">
-      <i class="pi pi-envelope"></i> Send e-post
-    </button>
-    <button (click)="onFacebookClick()" [disabled]="!company.facebook">
-      <i class="pi pi-facebook"></i> Facebook
-    </button>
+      <div class="cta-buttons">
+        <button class="btn-secondary" (click)="onContactClick()">
+          <i class="pi pi-envelope"></i> Send e-post
+        </button>
+        <button
+          class="btn-secondary"
+          (click)="onFacebookClick()"
+          [disabled]="!company.facebook"
+        >
+          <i class="pi pi-facebook"></i> Facebook
+        </button>
+      </div>
+
+      <p class="disclaimer">
+        <i class="pi pi-info-circle"></i>
+        Avbestill senest 24 timer før – ellers faktureres timen.
+      </p>
+    </div>
   </div>
 
-  <p class="disclaimer">
-    Avbestill senest 24 timer før – ellers faktureres timen.
-  </p>
-</div>
+  <div class="order-info">
+    <div class="info-card">
+      <div class="info-icon">
+        <i class="pi pi-clock"></i>
+      </div>
+      <h3>Åpningstider</h3>
+      <p>Man-Fre: 09:00 - 18:30</p>
+      <p>Lørdag: 09:00 - 14:00</p>
+    </div>
+    <div class="info-card">
+      <div class="info-icon">
+        <i class="pi pi-map-marker"></i>
+      </div>
+      <h3>Adresse</h3>
+      <p>{{ company.address }}</p>
+    </div>
+    <div class="info-card">
+      <div class="info-icon">
+        <i class="pi pi-heart"></i>
+      </div>
+      <h3>Velkommen</h3>
+      <p>Vi tar imot alle med åpne armer!</p>
+    </div>
+  </div>
+</section>

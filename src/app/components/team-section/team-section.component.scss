@@ -1,21 +1,23 @@
 @import "variables";
 
 .team-section {
-  margin: $spacing-lg 0;
+  margin: 0;
 
   .team-grid {
     display: grid;
-    gap: $spacing-lg;
-    padding: $spacing-lg $spacing-sm;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 900px;
+    margin: 0 auto;
 
-    grid-template-columns: 1fr;
-
-    @media (min-width: $breakpoint-sm) {
+    @media (max-width: 992px) {
       grid-template-columns: repeat(2, 1fr);
+      max-width: 600px;
     }
 
-    @media (min-width: $breakpoint-lg) {
-      grid-template-columns: repeat(3, 1fr);
+    @media (max-width: 576px) {
+      grid-template-columns: 1fr;
+      max-width: 300px;
     }
   }
 }

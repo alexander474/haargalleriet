@@ -1,20 +1,23 @@
 // =============================================
-// 🎨 FARGEPALETT – Hårgalleriet Fagernes
+// 🎨 FARGER - Rose Gold / Elegant Salon Palette
 // =============================================
 
-$color-text-main: #3b2c24;
-$color-muted: #7b6c63;
-$color-accent: #b08968;
-$color-accent-dark: darken($color-accent, 10%);
-$color-facebook: #1877f2;
+$color-primary: #c9a087;
+$color-primary-dark: #a67c5b;
+$color-primary-light: #e5cbb8;
 
-$color-bg-light: #fdfaf6;
+$color-accent: #d4a574;
+$color-accent-dark: #b8956a;
+
+$color-text: #2d2420;
+$color-text-muted: #6b5b54;
+
+$color-bg: #faf8f6;
 $color-bg-white: #ffffff;
-$color-border-light: #e2d4c3;
-$color-shadow-light: rgba(0, 0, 0, 0.06);
 
-$color-price-highlight: #6b4c34;
-$color-button-primary: #b88a3d;
+$color-neutral-100: #f7f5f3;
+$color-neutral-200: #ebe7e3;
+$color-neutral-800: #262626;
 
 // =============================================
 // 🖋 TYPOGRAFI
@@ -23,14 +26,8 @@ $color-button-primary: #b88a3d;
 $font-primary: "Inter", sans-serif;
 $font-secondary: "Playfair Display", serif;
 
-$font-base: 16px;
-$font-size-sm: 0.875rem;
-$font-size-md: 1rem;
-$font-size-lg: 1.25rem;
-$font-size-xl: 2rem;
-
 // =============================================
-// 📐 SPACING & CORNERS
+// 📐 SPACING
 // =============================================
 
 $spacing-xs: 0.5rem;
@@ -38,9 +35,6 @@ $spacing-sm: 1rem;
 $spacing-md: 1.5rem;
 $spacing-lg: 2rem;
 $spacing-xl: 3rem;
-
-$radius-soft: 12px;
-$radius-rounded: 999px;
 
 // =============================================
 // 📱 BREAKPOINTS
@@ -50,35 +44,3 @@ $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
-
-// =============================================
-// ⚡ SHADOWS
-// =============================================
-
-$shadow-soft: 0 4px 12px $color-shadow-light;
-$shadow-medium: 0 6px 20px rgba(0, 0, 0, 0.08);
-
-// ================================
-// ✨ TYPOGRAFI MIXINS
-// ================================
-
-@mixin heading($size: md) {
-  font-family: $font-primary;
-  font-weight: 600;
-  color: $color-text-main;
-  letter-spacing: 0.02em;
-  @if $size == sm {
-    font-size: 1.5rem;
-  } @else if $size == md {
-    font-size: 2rem;
-  } @else if $size == lg {
-    font-size: 2.5rem;
-  }
-}
-
-@mixin card {
-  background-color: $color-bg-white;
-  border-radius: $radius-soft;
-  box-shadow: $shadow-soft;
-  padding: $spacing-lg;
-}
