@@ -32,5 +32,5 @@ jobs:
           port: 22
           source: dist/haargalleriet/browser/**
           target: /customers/9/d/9/haargallerietfagernes.no/httpd.www/
-          rm: false
+          rm: true
           strip_components: 3
