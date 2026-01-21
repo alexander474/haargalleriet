@@ -3,6 +3,11 @@ import { CommonModule } from '@angular/common';
 import { PriceItem } from '../../models/PriceItem.model';
 import { ButtonModule } from 'primeng/button';
 
+interface CategoryGroup {
+  name: string;
+  items: PriceItem[];
+}
+
 @Component({
   selector: 'app-price-list',
   standalone: true,
@@ -13,42 +18,28 @@ import { ButtonModule } from 'primeng/button';
 export class PriceListComponent implements OnChanges {
   @Input() priceItems: PriceItem[] = [];
 
-  categories: string[] = [];
-  selectedCategory: string = '';
-  filteredItems: PriceItem[] = [];
-
-  // Paginering
-  page: number = 1;
-  itemsPerPage: number = 10;
+  categoryGroups: CategoryGroup[] = [];
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['priceItems']) {
-      this.categories = Array.from(
-        new Set(this.priceItems.map((item) => item.category || 'Annet'))
-      );
-      this.selectedCategory = this.categories[0];
-      this.updateFilteredItems();
+      this.groupByCategory();
     }
   }
 
-  selectCategory(category: string): void {
-    this.selectedCategory = category;
-    this.page = 1;
-    this.updateFilteredItems();
-  }
+  groupByCategory(): void {
+    const groups = new Map<string, PriceItem[]>();
 
-  updateFilteredItems(): void {
-    this.filteredItems = this.priceItems.filter(
-      (item) => (item.category || 'Annet') === this.selectedCategory
-    );
-  }
+    this.priceItems.forEach((item) => {
+      const category = item.category || 'Annet';
+      if (!groups.has(category)) {
+        groups.set(category, []);
+      }
+      groups.get(category)!.push(item);
+    });
 
-  get pagedItems(): PriceItem[] {
-    const start = (this.page - 1) * this.itemsPerPage;
-    return this.filteredItems.slice(start, start + this.itemsPerPage);
-  }
-
-  totalPages(): number {
-    return Math.ceil(this.filteredItems.length / this.itemsPerPage);
+    this.categoryGroups = Array.from(groups.entries()).map(([name, items]) => ({
+      name,
+      items,
+    }));
   }
 }

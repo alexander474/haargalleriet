@@ -1,15 +1,16 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CardModule } from 'primeng/card';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-service-box',
   standalone: true,
-  imports: [CommonModule, CardModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './service-box.component.html',
   styleUrls: ['./service-box.component.scss'],
 })
 export class ServiceBoxComponent {
   @Input() name: string = '';
   @Input() description: string = '';
+  @Input() icon: string = 'pi-star';
 }

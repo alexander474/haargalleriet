@@ -1,23 +1,27 @@
 <section class="hero">
-  <img
-    src="assets/images/owners_photo.jpg"
-    alt="Hilde og Anita"
-    class="hero-image"
-  />
-  <div class="hero-overlay"></div>
   <div class="hero-content">
-    <h1>Om oss</h1>
-    <p>Møt teamet bak Hårgalleriet</p>
+    <span class="label">Om oss</span>
+    <h1>Velkommen til Hårgalleriet</h1>
+    <p>Din frisørsalong i hjertet av Fagernes siden 1995</p>
   </div>
 </section>
 
 <section class="about-container">
   <div class="intro-section">
-    <span class="section-label">Vår historie</span>
-    <h2 class="title">Velkommen til Hårgalleriet</h2>
-    <p class="intro-text">
-      {{ companyInfo.about }}
-    </p>
+    <div class="intro-content">
+      <span class="section-label">Vår historie</span>
+      <h2 class="title">Erfaring og lidenskap</h2>
+      <p class="intro-text">
+        {{ companyInfo.about }}
+      </p>
+    </div>
+
+    <div class="owners-photo">
+      <img src="assets/images/owners_photo.jpg" alt="Hilde og Anita" />
+      <div class="photo-caption">
+        <strong>Hilde & Anita</strong>
+      </div>
+    </div>
   </div>
 
   <div class="team-wrapper">

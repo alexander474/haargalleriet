@@ -1,5 +1,8 @@
-<div class="service-box">
-  <div class="highlight-bar"></div>
+<a routerLink="/prices" class="service-box">
+  <div class="icon-circle">
+    <i class="pi" [ngClass]="icon"></i>
+  </div>
   <div class="title">{{ name }}</div>
   <p>{{ description }}</p>
-</div>
+  <span class="view-prices">Se priser <i class="pi pi-arrow-right"></i></span>
+</a>

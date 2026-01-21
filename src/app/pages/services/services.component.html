@@ -12,6 +12,7 @@
       *ngFor="let s of services"
       [name]="s.label"
       [description]="s.description"
+      [icon]="s.icon || 'pi-star'"
     >
     </app-service-box>
   </div>
