@@ -99,3 +99,36 @@
     }
   }
 }
+
+.price-disclaimer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 3rem;
+  padding: 1.25rem 2rem;
+  background: $color-neutral-100;
+  border-radius: 8px;
+  border-left: 3px solid $color-primary;
+
+  i {
+    color: $color-primary;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: $color-text-muted;
+    font-style: italic;
+  }
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    text-align: center;
+    border-left: none;
+    border-top: 3px solid $color-primary;
+    gap: 0.5rem;
+  }
+}

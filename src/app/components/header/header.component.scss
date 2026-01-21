@@ -68,6 +68,14 @@
       width: 100%;
     }
   }
+
+  &.active {
+    color: $color-primary;
+
+    &::after {
+      width: 100%;
+    }
+  }
 }
 
 .custom-button {
@@ -136,6 +144,11 @@
   &:hover {
     color: $color-primary;
     background-color: $color-neutral-100;
+  }
+
+  &.active {
+    color: $color-primary;
+    background-color: $color-primary-light;
   }
 }
 

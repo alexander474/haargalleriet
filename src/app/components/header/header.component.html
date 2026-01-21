@@ -12,6 +12,8 @@
       <a
         *ngFor="let item of items"
         [routerLink]="item.routerLink"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: item.routerLink === '/' }"
         class="header-link"
       >
         {{ item.label }}
@@ -32,6 +34,8 @@
     <a
       *ngFor="let item of items"
       [routerLink]="item.routerLink"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: item.routerLink === '/' }"
       class="mobile-link"
       (click)="toggleMobileMenu()"
     >
