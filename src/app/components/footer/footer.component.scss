@@ -151,4 +151,15 @@
   font-size: 0.7rem;
   font-family: $font-primary;
   letter-spacing: 0.5px;
+
+  .env-badge {
+    display: inline-block;
+    background: #e74c3c;
+    color: white;
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 0.6rem;
+    margin-right: 0.5rem;
+  }
 }

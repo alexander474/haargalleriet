@@ -20,12 +20,23 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Set build version
+      - name: Set build version info
         run: |
-          BUILD_DATE=$(date +'%d.%m.%Y %H:%M')
-          SHORT_SHA=${GITHUB_SHA::7}
-          sed -i "s/version: '1.0.0'/version: '1.0.0-${SHORT_SHA}'/" src/environments/environment.prod.ts
-          sed -i "s/buildDate: new Date().toLocaleDateString('no-NO')/buildDate: '${BUILD_DATE}'/" src/environments/environment.prod.ts
+          VERSION=$(node -p "require('./package.json').version")
+          BUILD_DATE=$(TZ='Europe/Oslo' date +'%d.%m.%Y %H:%M')
+          BUILD_NUMBER=${{ github.run_number }}
+          COMMIT_HASH=${GITHUB_SHA::7}
+
+          # Update environment.prod.ts with build info
+          sed -i "s/__BUILD_DATE__/${BUILD_DATE}/" src/environments/environment.prod.ts
+          sed -i "s/__BUILD_NUMBER__/${BUILD_NUMBER}/" src/environments/environment.prod.ts
+          sed -i "s/__COMMIT_HASH__/${COMMIT_HASH}/" src/environments/environment.prod.ts
+          sed -i "s/version: '1.0.0'/version: '${VERSION}'/" src/environments/environment.prod.ts
+
+          echo "📦 Version: ${VERSION}"
+          echo "📅 Build Date: ${BUILD_DATE}"
+          echo "🔢 Build Number: ${BUILD_NUMBER}"
+          echo "🔗 Commit: ${COMMIT_HASH}"
 
       - name: Build Angular project
         run: npm run build -- --base-href /

@@ -14,6 +14,9 @@ export class FooterComponent {
   companyInfo = companyInfo;
   version = environment.version;
   buildDate = environment.buildDate;
+  buildNumber = environment.buildNumber;
+  commitHash = environment.commitHash;
+  isProduction = environment.production;
 
   get mapsUrl(): string {
     const encodedAddress = encodeURIComponent(this.companyInfo.address);

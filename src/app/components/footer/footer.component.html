@@ -58,4 +58,7 @@
   </div>
 </footer>
 
-<div class="version-bar">v{{ version }} • {{ buildDate }}</div>
+<div class="version-bar">
+  <span *ngIf="!isProduction" class="env-badge">DEV</span>
+  v{{ version }} • Build #{{ buildNumber }} • {{ commitHash }} • {{ buildDate }}
+</div>
