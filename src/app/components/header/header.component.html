@@ -25,12 +25,18 @@
       ></p-button>
     </nav>
 
-    <button class="mobile-menu-icon" (click)="toggleMobileMenu()">
-      <i class="pi pi-bars"></i>
+    <button
+      class="mobile-menu-icon"
+      [class.open]="showMobileMenu"
+      (click)="toggleMobileMenu()"
+    >
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </button>
   </div>
 
-  <nav class="mobile-menu" *ngIf="showMobileMenu">
+  <nav class="mobile-menu" [class.show]="showMobileMenu">
     <a
       *ngFor="let item of items"
       [routerLink]="item.routerLink"
@@ -41,11 +47,8 @@
     >
       {{ item.label }}
     </a>
-    <p-button
-      label="BESTILL TIME"
-      routerLink="/order"
-      styleClass="custom-button mobile-button"
-      (click)="toggleMobileMenu()"
-    ></p-button>
+    <a routerLink="/order" class="mobile-cta" (click)="toggleMobileMenu()">
+      Bestill time
+    </a>
   </nav>
 </header>
