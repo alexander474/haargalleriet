@@ -1,26 +1,28 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CardModule } from 'primeng/card';
-import { ButtonModule } from 'primeng/button';
 import { companyInfo } from '../../models/CompanyInfo.model';
 
 @Component({
   selector: 'app-order',
   standalone: true,
-  imports: [CommonModule, CardModule, ButtonModule],
+  imports: [CommonModule],
   templateUrl: './order.component.html',
   styleUrls: ['./order.component.scss'],
 })
 export class OrderComponent {
   company = companyInfo;
 
-  onContactClick() {
-    window.open(`mailto:${this.company.email}`, '_blank');
+  // Computed URLs
+  get phoneUrl(): string {
+    return `tel:${this.company.phoneInternational.replace(/\s/g, '')}`;
   }
 
-  onFacebookClick() {
-    if (this.company.facebook) {
-      window.open(this.company.facebook, '_blank');
-    }
+  get emailUrl(): string {
+    return `mailto:${this.company.email}`;
+  }
+
+  get mapsUrl(): string {
+    const encodedAddress = encodeURIComponent(this.company.address);
+    return `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`;
   }
 }

@@ -3,24 +3,30 @@
     <div class="order-content">
       <span class="order-badge">Kontakt oss</span>
       <h1>Bestill time</h1>
-      <p class="lead">Vi gleder oss til å ta deg imot – kontakt oss direkte:</p>
+      <p class="lead">Vi gleder oss til å ta deg imot!</p>
 
-      <a [href]="'tel:' + company.phoneInternational" class="main-phone">
-        <i class="pi pi-phone"></i>
-        <span>{{ company.phoneInternational }}</span>
-      </a>
+      <div class="phone-box">
+        <div class="phone-label">Ring oss direkte</div>
+        <a [href]="phoneUrl" class="phone-number">
+          <i class="pi pi-phone"></i>
+          <span>{{ company.phoneInternational }}</span>
+        </a>
+        <div class="phone-hint">Man-Fre: 09:00-16:30 · Lør: 09:00-14:00</div>
+      </div>
 
       <div class="cta-buttons">
-        <button class="btn-secondary" (click)="onContactClick()">
+        <a [href]="emailUrl" class="btn-secondary">
           <i class="pi pi-envelope"></i> Send e-post
-        </button>
-        <button
+        </a>
+        <a
+          [href]="company.facebook"
+          target="_blank"
+          rel="noopener noreferrer"
           class="btn-secondary"
-          (click)="onFacebookClick()"
-          [disabled]="!company.facebook"
+          *ngIf="company.facebook"
         >
           <i class="pi pi-facebook"></i> Facebook
-        </button>
+        </a>
       </div>
 
       <p class="disclaimer">
@@ -36,16 +42,24 @@
         <i class="pi pi-clock"></i>
       </div>
       <h3>Åpningstider</h3>
-      <p>Man-Fre: 09:00 - 18:30</p>
+      <p>Man-Fre: 09:00 - 16:30</p>
       <p>Lørdag: 09:00 - 14:00</p>
     </div>
-    <div class="info-card">
+    <a
+      [href]="mapsUrl"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="info-card clickable"
+    >
       <div class="info-icon">
         <i class="pi pi-map-marker"></i>
       </div>
       <h3>Adresse</h3>
       <p>{{ company.address }}</p>
-    </div>
+      <span class="card-link"
+        >Åpne i Google Maps <i class="pi pi-external-link"></i
+      ></span>
+    </a>
     <div class="info-card">
       <div class="info-icon">
         <i class="pi pi-heart"></i>

@@ -68,28 +68,48 @@
     line-height: 1.6;
   }
 
-  .main-phone {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: white;
-    text-decoration: none;
-    margin-bottom: 2rem;
-    padding: 0.875rem 1.75rem;
+  .phone-box {
     background: rgba(255, 255, 255, 0.15);
-    border-radius: 12px;
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.25);
-    transition: all 0.3s;
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
 
-    i {
-      font-size: 1.25rem;
+    .phone-label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      opacity: 0.85;
+      margin-bottom: 0.75rem;
     }
 
-    &:hover {
-      background: rgba(255, 255, 255, 0.25);
-      transform: translateY(-2px);
+    .phone-number {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 2rem;
+      font-weight: 700;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s;
+
+      i {
+        font-size: 1.5rem;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 0.5rem;
+        border-radius: 50%;
+      }
+
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+
+    .phone-hint {
+      font-size: 0.8rem;
+      opacity: 0.75;
+      margin-top: 0.75rem;
     }
   }
 
@@ -201,6 +221,33 @@
       color: $color-text-muted;
       margin: 0 0 0.2rem;
       line-height: 1.5;
+    }
+
+    &.clickable {
+      cursor: pointer;
+
+      &:hover {
+        border-color: $color-primary;
+
+        .card-link {
+          color: $color-primary-dark;
+        }
+      }
+    }
+
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: $color-primary;
+      margin-top: 0.75rem;
+      transition: color 0.3s;
+
+      i {
+        font-size: 0.75rem;
+      }
     }
   }
 }
