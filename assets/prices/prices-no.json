@@ -12,18 +12,10 @@
     { "service": "Styling Time pris", "price": "1090,-" }
   ],
   "Farge": [
-    { "service": "Farge design (1)", "price": "1575,-" },
-    { "service": "Farge design (2)", "price": "1785,-" },
-    { "service": "Farge design (3)", "price": "2730,-" },
-    { "service": "Farge i bunnen 4. uker", "price": "860,-" },
-    { "service": "Farge i bunnen 6.uker", "price": "920,-" },
-    { "service": "Farge i bunnen mer enn 6 uker presøft", "price": "1050,-" },
-    { "service": "Farge i hele hår - langt", "price": "1560,-" },
-    { "service": "Farge i hele håret kort", "price": "1260,-" },
-    { "service": "Farge i hele håret mellomlangt", "price": "1420,-" },
-    { "service": "Farge i helehåret, langt/tykt hår", "price": "1720,-" },
-    { "service": "Helbleking kort", "price": "2100,-" },
-    { "service": "Helbleking langt hår", "price": "2625,-" },
+    { "service": "Farge design", "price": "1575 - 2730,-" },
+    { "service": "Farge ettervekst", "price": "860 - 1050,-" },
+    { "service": "Farge i hele håret", "price": "1260 - 1720,-" },
+    { "service": "Helbleking", "price": "2100 - 2625,-" },
     { "service": "Rens med effasør  pr.pk.", "price": "300,-" }
   ],
   "Klipp": [
@@ -47,33 +39,17 @@
     { "service": "Hodebunnsmassasje m/kur 10 min.", "price": "380,-" },
     { "service": "Kur", "price": "270,-" }
   ],
-  "Permanent": [
-    { "service": "Permanent i Langt hår", "price": "2415,-" },
-    { "service": "Permanent bare oppa", "price": "1260,-" },
-    { "service": "Permanent hele håret", "price": "1370,-" },
-    { "service": "Permanent pr spole", "price": "105,-" }
-  ],
+  "Permanent": [{ "service": "Permanent", "price": "1370 - 2415,-" }],
   "Striper": [
     { "service": "Balayage langt hår", "price": "1840,-" },
     { "service": "Balayage mellomlangt hår", "price": "1600,-" },
-    { "service": "Folie 1", "price": "1210,-" },
-    { "service": "Folie 2", "price": "1970,-" },
-    { "service": "Folie 3", "price": "2250,-" },
-    { "service": "Folie 4", "price": "2800,-" },
-    { "service": "Hette striper bare på toppen", "price": "990,-" },
-    { "service": "Hettestriper ettervekst", "price": "1200,-" },
-    { "service": "Hettestriper hele håret langt", "price": "1900,-" },
-    { "service": "Hettestriper hele håret, kort.", "price": "1080,-" },
-    { "service": "Hettestriper hele håret, skulderlangt", "price": "1500,-" },
+    { "service": "Folie", "price": "1210 - 2800,-" },
+    { "service": "Hettestriper", "price": "990 - 1500,-" },
     { "service": "Violet Booster", "price": "50,-" }
   ],
   "Toning": [
-    { "service": "Glanssvask kort hår.", "price": "620,-" },
-    { "service": "Glanssvask langt/tykt hår.", "price": "1000,-" },
-    { "service": "Glanssvask mellomlangt hår.", "price": "730,-" },
-    { "service": "Glossing kort hår", "price": "340,-" },
-    { "service": "Glossing langt hår", "price": "550,-" },
-    { "service": "Glossing mellomlangt hår", "price": "440,-" }
+    { "service": "Glanssvask", "price": "620 - 1000,-" },
+    { "service": "Glossing", "price": "340 - 550,-" }
   ],
   "Vipper/Bryn": [
     { "service": "Farge vipper og bryn+napp", "price": "720,-" },
@@ -82,7 +58,7 @@
     { "service": "Farge vipper", "price": "350,-" },
     { "service": "Forme bryn", "price": "280,-" },
     { "service": "Påfyll 15 min", "price": "225,-" },
-    { "service": "Vippeextension klassisk", "price": "1650,-" },
+    { "service": "Vippeextension", "price": "1650 - 1850,-" },
     {
       "service": "Vippeextension påfyll pr. halvtime klassisk",
       "price": "350,-"
@@ -91,8 +67,6 @@
       "service": "Vippeextensions påfyll pr. halvtime volume",
       "price": "450,-"
     },
-    { "service": "Vippeextentions Hybrid", "price": "1750,-" },
-    { "service": "Vippeextentions Volume", "price": "1850,-" },
     { "service": "Vippeleft", "price": "500,-" },
     { "service": "Vippeleft m. farge", "price": "850,-" }
   ]

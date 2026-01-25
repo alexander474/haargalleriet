@@ -1,6 +1,14 @@
 RewriteEngine On
 RewriteBase /
 
+# Set correct MIME types
+AddType application/xml .xml
+AddType text/plain .txt
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+
 # Redirect non-www to www
 RewriteCond %{HTTP_HOST} ^haargallerietfagernes\.no [NC]
 RewriteRule ^(.*)$ https://www.haargallerietfagernes.no/$1 [L,R=301]
