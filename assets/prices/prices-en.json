@@ -5,8 +5,6 @@
     { "service": "Bridal Styling per hour", "price": "1150,-" }
   ],
   "Miscellaneous": [
-    { "service": "Miscellaneous Treatment", "price": "0,-" },
-    { "service": "Miscellaneous Products", "price": "0,-" },
     { "service": "Ear Piercing", "price": "310,-" },
     { "service": "Bag", "price": "5,-" },
     { "service": "Styling Hourly Rate", "price": "1090,-" }
