@@ -62,6 +62,27 @@
     <!-- Theme Color -->
     <meta name="theme-color" content="#c9a087" />
 
+    <!-- Hreflang for language versions -->
+    <link
+      rel="alternate"
+      hreflang="no"
+      href="https://www.haargallerietfagernes.no/"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://www.haargallerietfagernes.no/?lang=en"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://www.haargallerietfagernes.no/"
+    />
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <!-- Structured Data - HairSalon (Schema.org) -->
     <script type="application/ld+json">
       {
@@ -139,8 +160,20 @@
       type="image/png"
       href="assets/images/logos/Haargalleriet_logo.png"
     />
+
+    <!-- Preload critical image -->
+    <link rel="preload" as="image" href="assets/images/employees_photo.jpg" />
   </head>
   <body>
     <app-root></app-root>
+
+    <!-- Noscript fallback for SEO -->
+    <noscript>
+      <div style="padding: 20px; text-align: center">
+        <h1>Hårgalleriet Fagernes</h1>
+        <p>Din personlige frisørsalong i Valdres siden 1995.</p>
+        <p>Telefon: 61 36 04 78 | Adresse: Jernbanevegen 4, 2900 Fagernes</p>
+      </div>
+    </noscript>
   </body>
 </html>
