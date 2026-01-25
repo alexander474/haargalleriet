@@ -12,21 +12,10 @@
     { "service": "Styling Hourly Rate", "price": "1090,-" }
   ],
   "Color": [
-    { "service": "Color Design (1)", "price": "1575,-" },
-    { "service": "Color Design (2)", "price": "1785,-" },
-    { "service": "Color Design (3)", "price": "2730,-" },
-    { "service": "Root Color 4 weeks", "price": "860,-" },
-    { "service": "Root Color 6 weeks", "price": "920,-" },
-    {
-      "service": "Root Color more than 6 weeks pre-softened",
-      "price": "1050,-"
-    },
-    { "service": "Full Color - long hair", "price": "1560,-" },
-    { "service": "Full Color - short hair", "price": "1260,-" },
-    { "service": "Full Color - medium length", "price": "1420,-" },
-    { "service": "Full Color - long/thick hair", "price": "1720,-" },
-    { "service": "Full Bleach - short hair", "price": "2100,-" },
-    { "service": "Full Bleach - long hair", "price": "2625,-" },
+    { "service": "Color Design", "price": "1575 - 2730,-" },
+    { "service": "Regrowth Color", "price": "860 - 1050,-" },
+    { "service": "Full Color", "price": "1260 - 1720,-" },
+    { "service": "Full Bleach", "price": "2100 - 2625,-" },
     { "service": "Color Remover per pack", "price": "300,-" }
   ],
   "Haircuts": [
@@ -50,36 +39,17 @@
     { "service": "Scalp Massage with Treatment 10 min", "price": "380,-" },
     { "service": "Hair Treatment", "price": "270,-" }
   ],
-  "Perm": [
-    { "service": "Perm - Long Hair", "price": "2415,-" },
-    { "service": "Perm - Top Only", "price": "1260,-" },
-    { "service": "Perm - Full Head", "price": "1370,-" },
-    { "service": "Perm per rod", "price": "105,-" }
-  ],
+  "Perm": [{ "service": "Perm", "price": "1370 - 2415,-" }],
   "Highlights": [
     { "service": "Balayage - Long Hair", "price": "1840,-" },
     { "service": "Balayage - Medium Hair", "price": "1600,-" },
-    { "service": "Foil Highlights 1", "price": "1210,-" },
-    { "service": "Foil Highlights 2", "price": "1970,-" },
-    { "service": "Foil Highlights 3", "price": "2250,-" },
-    { "service": "Foil Highlights 4", "price": "2800,-" },
-    { "service": "Cap Highlights - Top Only", "price": "990,-" },
-    { "service": "Cap Highlights - Regrowth", "price": "1200,-" },
-    { "service": "Cap Highlights - Full Head Long", "price": "1900,-" },
-    { "service": "Cap Highlights - Full Head Short", "price": "1080,-" },
-    {
-      "service": "Cap Highlights - Full Head Shoulder Length",
-      "price": "1500,-"
-    },
+    { "service": "Foil Highlights", "price": "1210 - 2800,-" },
+    { "service": "Cap Highlights", "price": "990 - 1500,-" },
     { "service": "Violet Booster", "price": "50,-" }
   ],
   "Toning": [
-    { "service": "Gloss Wash - Short Hair", "price": "620,-" },
-    { "service": "Gloss Wash - Long/Thick Hair", "price": "1000,-" },
-    { "service": "Gloss Wash - Medium Hair", "price": "730,-" },
-    { "service": "Glossing - Short Hair", "price": "340,-" },
-    { "service": "Glossing - Long Hair", "price": "550,-" },
-    { "service": "Glossing - Medium Hair", "price": "440,-" }
+    { "service": "Gloss Wash", "price": "620 - 1000,-" },
+    { "service": "Glossing", "price": "340 - 550,-" }
   ],
   "Lashes/Brows": [
     { "service": "Lash and Brow Tint + Shaping", "price": "720,-" },
@@ -88,7 +58,7 @@
     { "service": "Lash Tint", "price": "350,-" },
     { "service": "Brow Shaping", "price": "280,-" },
     { "service": "Touch-up 15 min", "price": "225,-" },
-    { "service": "Classic Lash Extensions", "price": "1650,-" },
+    { "service": "Lash Extensions", "price": "1650 - 1850,-" },
     {
       "service": "Lash Extension Fill-in per 30 min - Classic",
       "price": "350,-"
@@ -97,8 +67,6 @@
       "service": "Lash Extension Fill-in per 30 min - Volume",
       "price": "450,-"
     },
-    { "service": "Hybrid Lash Extensions", "price": "1750,-" },
-    { "service": "Volume Lash Extensions", "price": "1850,-" },
     { "service": "Lash Lift", "price": "500,-" },
     { "service": "Lash Lift with Tint", "price": "850,-" }
   ]
