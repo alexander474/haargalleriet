@@ -7,5 +7,17 @@
 </section>
 
 <section class="prices-content">
-  <app-price-list [priceItems]="priceItems"></app-price-list>
+  @if (pricesUpdating) {
+    <div class="updating-notice" role="status">
+      <i class="pi pi-sync" aria-hidden="true"></i>
+      <h2>{{ "PRICES.UPDATING_TITLE" | translate }}</h2>
+      <p>{{ "PRICES.UPDATING_TEXT" | translate }}</p>
+      <a routerLink="/order" class="updating-cta">
+        {{ "PRICES.UPDATING_CTA" | translate }}
+        <i class="pi pi-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  } @else {
+    <app-price-list [priceItems]="priceItems"></app-price-list>
+  }
 </section>
