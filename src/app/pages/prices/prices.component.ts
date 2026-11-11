@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { RouterLink } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { PriceItem } from '../../models/PriceItem.model';
 import { PriceListComponent } from '../../components/price-list/price-list.component';
@@ -21,11 +22,14 @@ interface PriceData {
     PriceListComponent,
     ButtonModule,
     TranslateModule,
+    RouterLink,
   ],
   templateUrl: './prices.component.html',
   styleUrls: ['./prices.component.scss'],
 })
 export class PricesComponent implements OnInit, OnDestroy {
+  /** Sett til false når nye priser er lagt inn for å vise prislisten igjen. */
+  readonly pricesUpdating = true;
   priceItems: PriceItem[] = [];
   private langSubscription?: Subscription;
 
@@ -35,6 +39,8 @@ export class PricesComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
+    if (this.pricesUpdating) return;
+
     this.loadPriceData();
 
     // Reload prices when language changes

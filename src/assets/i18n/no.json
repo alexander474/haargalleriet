@@ -90,7 +90,10 @@
     "TITLE": "Våre behandlinger",
     "SUBTITLE": "Alle våre behandlinger er utført med omtanke, ekspertise og øye for detaljer",
     "DISCLAIMER": "Prisene er veiledende og kan variere basert på hårlengde og behandlingstid",
-    "FROM": "fra"
+    "FROM": "fra",
+    "UPDATING_TITLE": "Prisene oppdateres",
+    "UPDATING_TEXT": "Vi jobber med å oppdatere prislisten vår. Ta gjerne kontakt med oss for gjeldende priser.",
+    "UPDATING_CTA": "Kontakt oss"
   },
   "ORDER": {
     "BADGE": "Kontakt oss",

@@ -45,6 +45,51 @@
   margin: 0 auto;
 }
 
+// Prices updating notice
+.updating-notice {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  text-align: center;
+  border: 1px solid $color-neutral-200;
+  border-radius: 12px;
+  background: $color-bg;
+
+  > .pi {
+    font-size: 2.5rem;
+    color: $color-primary;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-family: $font-secondary;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: $color-text;
+    margin: 0 0 0.75rem;
+  }
+
+  p {
+    color: $color-text-muted;
+    line-height: 1.7;
+    margin: 0 0 1.5rem;
+  }
+
+  .updating-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: $color-primary;
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .page-header {
     padding: 3rem 1.5rem;

@@ -90,7 +90,10 @@
     "TITLE": "Our Treatments",
     "SUBTITLE": "All our treatments are performed with care, expertise and attention to detail",
     "DISCLAIMER": "Prices are indicative and may vary based on hair length and treatment time",
-    "FROM": "from"
+    "FROM": "from",
+    "UPDATING_TITLE": "Prices are being updated",
+    "UPDATING_TEXT": "We are currently updating our price list. Please contact us for current prices.",
+    "UPDATING_CTA": "Contact us"
   },
   "ORDER": {
     "BADGE": "Contact us",
