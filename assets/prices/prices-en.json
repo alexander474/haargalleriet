@@ -1,71 +1,63 @@
 {
-  "Bridal": [
-    { "service": "Bridal Styling", "price": "5400,-" },
-    { "service": "Bridal Starter Package Trial", "price": "1650,-" },
-    { "service": "Bridal Styling per hour", "price": "1150,-" }
-  ],
-  "Miscellaneous": [
-    { "service": "Ear Piercing", "price": "310,-" },
-    { "service": "Bag", "price": "5,-" },
-    { "service": "Styling Hourly Rate", "price": "1090,-" }
+  "Haircuts": [
+    { "service": "Haircut", "price": "550 - 940,-" },
+    { "service": "Children's cut 0-9 years", "price": "450,-" },
+    { "service": "Children's cut 9-15 years", "price": "485,-" },
+    { "service": "Clipper cut", "price": "265,-" },
+    { "service": "Fringe / thinning", "price": "230,-" },
+    { "service": "Beard trim", "price": "120,-" },
+    { "service": "Add-on with haircut: wash and blow-dry", "price": "200,-" },
+    { "service": "Add-on with haircut: wash and dry", "price": "160,-" },
+    { "service": "Add-on with haircut: blow-dry", "price": "160,-" },
+    { "service": "Wash and blow-dry/set", "price": "550,-" },
+    { "service": "Wash", "price": "175,-" },
+    { "service": "Blow-dry", "price": "200,-" }
   ],
   "Color": [
-    { "service": "Color Design", "price": "1575 - 2730,-" },
-    { "service": "Regrowth Color", "price": "860 - 1050,-" },
-    { "service": "Full Color", "price": "1260 - 1720,-" },
-    { "service": "Full Bleach", "price": "2100 - 2625,-" },
-    { "service": "Color Remover per pack", "price": "300,-" }
+    { "service": "Root color", "price": "860 - 1050,-" },
+    { "service": "Full color", "price": "1260 - 1720,-" },
+    { "service": "Color design", "price": "1575 - 2730,-" },
+    { "service": "Full bleach", "price": "2100 - 2625,-" },
+    { "service": "Color remover (Effasor) per pack", "price": "300,-" }
   ],
-  "Haircuts": [
-    { "service": "Children's Cut 0-9 years", "price": "450,-" },
-    { "service": "Children's Cut 9-15 years", "price": "485,-" },
-    { "service": "Haircut 1", "price": "690,-" },
-    { "service": "Haircut 2", "price": "545,-" },
-    { "service": "Haircut 2 with wash", "price": "600,-" },
-    { "service": "Cut and Blow Dry", "price": "850,-" },
-    { "service": "Fringe/Thinning", "price": "230,-" },
-    { "service": "Clipper Cut", "price": "265,-" },
-    { "service": "Beard Trim", "price": "120,-" },
-    { "service": "Blow Dry", "price": "200,-" },
-    { "service": "Wash", "price": "175,-" },
-    { "service": "Wash, Cut and Blow Dry", "price": "880,-" },
-    { "service": "Wash, Cut and Dry", "price": "850,-" },
-    { "service": "Wash and Blow Dry/Set", "price": "525,-" }
-  ],
-  "Treatment": [
-    { "service": "Scalp Massage 10 min", "price": "270,-" },
-    { "service": "Scalp Massage with Treatment 10 min", "price": "380,-" },
-    { "service": "Hair Treatment", "price": "270,-" }
-  ],
-  "Perm": [{ "service": "Perm", "price": "1370 - 2415,-" }],
   "Highlights": [
-    { "service": "Balayage - Long Hair", "price": "1840,-" },
-    { "service": "Balayage - Medium Hair", "price": "1600,-" },
-    { "service": "Foil Highlights", "price": "1210 - 2800,-" },
-    { "service": "Cap Highlights", "price": "990 - 1500,-" },
+    { "service": "Cap highlights", "price": "1000 - 1900,-" },
+    { "service": "Foil highlights", "price": "1210 - 2800,-" },
+    { "service": "Balayage, medium hair", "price": "1600,-" },
+    { "service": "Balayage, long hair", "price": "1840,-" },
     { "service": "Violet Booster", "price": "50,-" }
   ],
   "Toning": [
-    { "service": "Gloss Wash", "price": "620 - 1000,-" },
-    { "service": "Glossing", "price": "340 - 550,-" }
+    { "service": "Glossing", "price": "340 - 550,-" },
+    { "service": "Gloss wash", "price": "620 - 1000,-" }
+  ],
+  "Perm": [
+    { "service": "Perm", "price": "1260 - 2415,-" },
+    { "service": "Perm per rod", "price": "105,-" }
+  ],
+  "Treatment": [
+    { "service": "Hair treatment", "price": "270,-" },
+    { "service": "Scalp massage 10 min", "price": "270,-" },
+    { "service": "Scalp massage with treatment 10 min", "price": "380,-" }
   ],
   "Lashes/Brows": [
-    { "service": "Lash and Brow Tint + Shaping", "price": "720,-" },
-    { "service": "Simple Shaping", "price": "120,-" },
-    { "service": "Brow Tint", "price": "280,-" },
-    { "service": "Lash Tint", "price": "350,-" },
-    { "service": "Brow Shaping", "price": "280,-" },
-    { "service": "Touch-up 15 min", "price": "225,-" },
-    { "service": "Lash Extensions", "price": "1650 - 1850,-" },
-    {
-      "service": "Lash Extension Fill-in per 30 min - Classic",
-      "price": "350,-"
-    },
-    {
-      "service": "Lash Extension Fill-in per 30 min - Volume",
-      "price": "450,-"
-    },
-    { "service": "Lash Lift", "price": "500,-" },
-    { "service": "Lash Lift with Tint", "price": "850,-" }
+    { "service": "Lash tint", "price": "360,-" },
+    { "service": "Brow tint", "price": "300,-" },
+    { "service": "Brow shaping", "price": "200,-" },
+    { "service": "Simple tweezing", "price": "120,-" },
+    { "service": "Lash and brow tint + tweezing", "price": "750,-" },
+    { "service": "Lash lift", "price": "700,-" },
+    { "service": "Lash lift with tint", "price": "900,-" },
+    { "service": "Lash extensions", "price": "1650 - 1850,-" },
+    { "service": "Lash extension fill-in per 30 min", "price": "500,-" },
+    { "service": "Fill-in 15 min", "price": "250,-" }
+  ],
+  "Bridal": [
+    { "service": "Bridal styling per hour", "price": "1250,-" },
+    { "service": "Bridal starter package, on location", "price": "1650,-" }
+  ],
+  "Miscellaneous": [
+    { "service": "Styling per hour", "price": "1100,-" },
+    { "service": "Ear piercing", "price": "310,-" }
   ]
 }
