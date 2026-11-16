@@ -29,7 +29,7 @@ interface PriceData {
 })
 export class PricesComponent implements OnInit, OnDestroy {
   /** Sett til false når nye priser er lagt inn for å vise prislisten igjen. */
-  readonly pricesUpdating = true;
+  readonly pricesUpdating = false;
   priceItems: PriceItem[] = [];
   private langSubscription?: Subscription;
 
