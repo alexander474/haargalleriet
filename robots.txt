@@ -6,7 +6,3 @@ Allow: /
 
 # Sitemap location
 Sitemap: https://www.haargallerietfagernes.no/sitemap.xml
-
-# Disallow admin/system paths
-Disallow: /api/
-Disallow: /*.json$
