@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, OnInit, PLATFORM_ID, inject } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -17,9 +17,17 @@ export class LanguageSwitcherComponent implements OnInit {
     { code: 'en', name: 'English', flag: '🇬🇧' },
   ];
 
+  private readonly isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
+
   constructor(private translate: TranslateService) {}
 
   ngOnInit() {
+    // Prerendered HTML is always Norwegian; language detection runs in the browser.
+    if (!this.isBrowser) {
+      this.translate.use('no');
+      return;
+    }
+
     // Check localStorage for saved language preference
     const savedLang = localStorage.getItem('language');
     if (savedLang && ['no', 'en'].includes(savedLang)) {
@@ -36,7 +44,9 @@ export class LanguageSwitcherComponent implements OnInit {
   switchLanguage(langCode: string) {
     this.currentLang = langCode;
     this.translate.use(langCode);
-    localStorage.setItem('language', langCode);
+    if (this.isBrowser) {
+      localStorage.setItem('language', langCode);
+    }
   }
 
   get currentFlag(): string {
